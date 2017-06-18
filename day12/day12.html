@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day12</title>
+    <link rel="stylesheet" href="day12.css">
+</head>
+<body>
+    <div class="all">
+        <div class="navi">
+            <img src="images/top.png" alt="sign" class="sign">
+            <ul>
+                <li>
+                    <a href="#">HOME</a>
+                </li>
+                <li>
+                    <a href="#">PRODUCT</a>
+                    <img src="images/top-tira.png" alt="top-triangle">
+                </li>
+                <li>
+                    <a href="#">SUPPORT</a>
+                    <img src="images/top-tira.png" alt="top-triangle">
+                </li>
+                <li>
+                    <a href="#">ABOUT</a>
+                    <img src="images/top-tira.png" alt="top-triangle">
+                </li>
+            </ul>
+        </div>
+        <div class="top-banner">
+            <div class="left">
+                <!--加上这个div是为了实现在页面较窄时，裁剪左侧，margin-right是不变的-->
+                <div>
+                    <!--不知道图中类似于斜线的东西是怎么做出来的，所以在这里拿斜线代替-->
+                    <p class="foward-slash">/</p>
+                    <p class="p1">HELLO</p>
+                    <p class="p1">WORLD</p>
+                    <p class="p2">PRODUCT</p>
+                    <p class="foward-slash">/</p>
+                </div>
+                <img src="images/left-v.png" alt="left-v">
+            </div>
+            <div class="right">
+                <img src="images/banner-top.png" alt="banner-top">
+            </div>
+        </div>
+        <!--<div class="left-v">-->
+        <!--</div>-->
+        <div class="module">
+            <div class="one same">
+                <div class="title">
+                    <div>
+                        <h1>One</h1>
+                        <h2>Level2 Title</h2>
+                    </div>
+                    <img src="images/one.png" alt="one">
+                </div>
+                <p>
+                    Some text Some text Some text
+                    Some text Some text Some text
+                    Some text Some text
+                </p>
+            </div>
+            <div class="two same">
+                <div class="title">
+                    <div>
+                        <h1>Two</h1>
+                        <h2>Level2 Title</h2>
+                    </div>
+                    <img src="images/two.png" alt="one">
+                </div>
+                <p>
+                    Some text Some text Some text
+                    Some text Some text Some text
+                    Some text Some text
+                </p>
+            </div>
+            <div class="three same">
+                <div class="title">
+                    <div>
+                        <h1>Three</h1>
+                        <h2>Level2 Title</h2>
+                    </div>
+                    <img src="images/three.png" alt="one">
+                </div>
+                <p>
+                    Some text Some text Some text
+                    Some text Some text Some text
+                    Some text Some text
+                </p>
+            </div>
+        </div>
+        <div class="center-banner">
+            <p>SOME TEXT</p>
+        </div>
+        <!--神奇啊，没设置flex，这些bar怎么就在一行了呢？-->
+        <div class="trans">
+            <img src="images/grey-bar.png" alt="first-bar">
+            <img src="images/lightgrey-bar.png" alt="second-bar">
+            <img src="images/lightgrey-bar.png" alt="third-bar">
+        </div>
+        <div class="tab">
+            <table>
+                <tr>
+                    <td>
+                        <a href="#">TABONE</a>
+                    </td>
+                    <td>
+                        <a href="#">TABTWO</a>
+                    </td>
+                    <td>
+                        <a href="#">TABTHR</a>
+                    </td>
+                    <td>
+                        <a href="#">TABFOR</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="detail">
+            <table>
+                <caption>Table Caption</caption>
+                <tr>
+                    <td></td>
+                    <td class="head">Free Version</td>
+                    <td class="head">Personal Version</td>
+                    <td class="head">Company Version</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature A</td>
+                    <td class="content">Some text Some text Some text</td>
+                    <td class="content">Some text Some text Some text</td>
+                    <td class="content">Some text Some text Some text</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature B</td>
+                    <td class="content">Some text Some text Some text</td>
+                    <td class="content">Some text Some text Some text</td>
+                    <td class="content">Some text Some text Some text</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature C</td>
+                    <td class="content">Some text Some text Some text</td>
+                    <td class="content">Some text Some text Some text</td>
+                    <td class="content">Some text Some text Some text</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature D</td>
+                    <td class="content">Some text Some text Some text</td>
+                    <td class="content">Some text Some text Some text</td>
+                    <td class="content">Some text Some text Some text</td>
+                </tr>
+                <tr>
+                    <td class="head">Price</td>
+                    <td class="price">Free</td>
+                    <td class="price">$9.99/<sup>mo</sup></td>
+                    <td class="price">$99.99/<sup>mo</sup></td>
+                </tr>
+            </table>
+        </div>
+        <div class="bottom-banner">
+            <select name="country" id="country" class="select-1">
+                <option value="look">select your country</option>
+            </select>
+            <select name="city" id="city" class="select-2">
+                <option value="notice">select your city</option>
+            </select>
+            <div class="submit">
+                <input type="email" value="input your e-mail address" class="input-1">
+                <input type="submit" value="submit" class="input-2">
+            </div>
+        </div>
+        <div class="version">
+            <p>
+                &copy;2017 IFE
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

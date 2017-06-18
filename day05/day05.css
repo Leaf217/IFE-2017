@@ -1,0 +1,243 @@
+@charset "utf-8";
+html{
+    color:#000;
+    background:#FFF;
+}
+*{
+    margin:0;
+    padding:0;
+}
+/*table {*/
+    /*border-collapse:collapse;*/
+    /*border-spacing:0;*/
+/*}*/
+fieldset,
+img {
+    border:0;
+}
+/*address,*/
+/*caption,*/
+/*cite,*/
+/*code,*/
+/*dfn,*/
+/*em,*/
+/*strong,*/
+/*th,*/
+/*var {*/
+    /*font-style:normal;*/
+    /*font-weight:normal;*/
+/*}*/
+
+/*ol,*/
+/*ul {*/
+    /*list-style:none;*/
+/*}*/
+
+/*caption,*/
+/*th {*/
+    /*text-align:left;*/
+/*}*/
+/*h1,*/
+/*h2,*/
+/*h3*/
+/*{*/
+    /*font-size:100%;*/
+    /*font-weight:normal;*/
+/*}*/
+/*q:before,*/
+/*q:after {*/
+    /*content:'';*/
+/*}*/
+/*abbr,*/
+/*acronym {*/
+    /*border:0;*/
+    /*font-variant:normal;*/
+/*}*/
+/*sup {*/
+    /*vertical-align:text-top;*/
+/*}*/
+/*sub {*/
+    /*vertical-align:text-bottom;*/
+/*}*/
+/*input,*/
+/*textarea,*/
+/*select {*/
+    /*font-family:inherit;*/
+    /*font-size:inherit;*/
+    /*font-weight:inherit;*/
+    /**font-size:100%;*/
+/*}*/
+/*legend {*/
+    /*color:#000;*/
+/*}*/
+
+/*---------------------华丽的分界线，上面是初始化--------------------------*/
+
+.all {
+    margin: 50px;
+}
+.part-1,.part-2{
+    width: 100%;
+    border: 1px solid #B9B9B9;
+    background-color: #F3F3F3;
+}
+.part-1 .row-1 div{
+    width: 100px;
+    height: 100px;
+    background-color: #D8D8D8;
+    border: 1px solid #B9B9B9;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    box-sizing: border-box;
+}
+.part-1 .row-2 div{
+    width: 100px;
+    height: 100px;
+    background-color: #D8D8D8;
+    border: 1px solid #B9B9B9;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    float: right;
+    box-sizing: border-box;
+}
+.part-1 .row-2{
+    clear: both;
+}
+/*第三行写的好艰难，总会出现跑出part1的情况，外面套一个div，问题才得以解决*/
+.part-1 .row-3{
+    margin: 10px;
+    clear: both;
+}
+.part-1 .row-3 div{
+    width: 100%;
+    height: 100px;
+    background-color: #D8D8D8;
+    border: 1px solid #B9B9B9;
+    box-sizing: border-box;
+}
+.part-1 .row-4 .col-1,.row-4 .col-2{
+    width: 50%;
+    float: left;
+}
+.part-1 .row-4 .col-1 div,.row-4 .col-2 div{
+    height: 100px;
+    background-color: #D8D8D8;
+    border: 1px solid #B9B9B9;
+    /*box-sizing的作用是将边框都包括在宽度和长度中*/
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+.part-1 .row-4 .col-2 div{
+    margin-right: 10px;
+}
+.part-1 .row-5 .col-1 div,.part-1 .row-5 .col-2 div,.part-1 .row-5 .col-3 div{
+    height: 100px;
+    background-color: #D8D8D8;
+    border: 1px solid #B9B9B9;
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.part-1 .row-5 .col-3 div{
+    margin-right: 10px;
+}
+.part-1 .row-5 .col-1,.part-1 .row-5 .col-2,.part-1 .row-5 .col-3{
+    width: 33.3333%;
+    float: left;
+}
+.part-1 .row-6 .col-1 div,.part-1 .row-6 .col-2 div,.part-1 .row-6 .col-3 div,.part-1 .row-6 .col-4 div{
+    height: 100px;
+    background-color: #D8D8D8;
+    border: 1px solid #B9B9B9;
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.part-1 .row-6 .col-4 div{
+    margin-right: 10px;
+}
+.part-1 .row-6 .col-1,.part-1 .row-6 .col-2,.part-1 .row-6 .col-3,.part-1 .row-6 .col-4{
+    width: 25%;
+    float: left;
+}
+.part-1 .block{
+    clear: both;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.part-1 .block .section-1 div{
+    width: 100%;
+    height: 50px;
+    background-color: #D8D8D8;
+    border: 1px solid #B9B9B9;
+    box-sizing: border-box;
+}
+.part-1 .block .section-2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.part-1 .block .col-1,.part-1 .block .col-3{
+    width: 80px;
+    box-sizing: border-box;
+}
+.part-1 .block .col-1{
+    float: left;
+}
+.part-1 .block .col-3{
+    float: right;
+}
+.part-1 .block .col-1,.part-1 .block .col-2,.part-1 .block .col-3{
+    background-color: #D8D8D8;
+    border: 1px solid #B9B9B9;
+    /*自适应高度，设定一个最小高度，内容增多，自动增高*/
+    min-height: 200px;
+    height: 100%;
+    box-sizing: border-box;
+}
+.part-1 .block .col-2{
+    margin-left: 90px;
+    margin-right: 90px;
+    box-sizing: border-box;
+}
+.part-1 .block .section-3 div{
+    width: 100%;
+    height: 50px;
+    background-color: #D8D8D8;
+    border: 1px solid #B9B9B9;
+    box-sizing: border-box;
+}
+.part-1 .block .section-3{
+    margin-bottom: 20px;
+}
+.part-2{
+    margin-top: 60px;
+}
+.part-2 .block{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.part-2 .image img{
+    width: 100px;
+    height: 100px;
+}
+.part-2 .image{
+    margin-left: 10px;
+    float: left;
+    box-sizing: border-box;
+}
+/*实现两栏式布局，自适应的栏目不能写float，刚开始写了float陷入了困境*/
+.part-2 .des{
+    margin-left: 125px;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+
+
+/*改动如下*/
+/*删除了很多不必要的clear：both设置；*/
+/*将罗列出的标签margin，padding的初始化直接改成了用通配符选择器*来初始化；*/
+/*删除了不必要的CSS初始化内容；*/
+/*规范化了class的命名*/

@@ -1,0 +1,161 @@
+@charset "utf-8";
+/*
+	TODO will need to remove settings on HTML since we can't namespace it.
+	TODO with the prefix, should I group by selector or property for weight savings?
+*/
+html{
+    color:#000;
+    background:#FFF;
+}
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF.
+*/
+* {
+    margin:0;
+    padding:0;
+}
+img {
+    border:0;
+}
+
+/*---------------------华丽的分界线，上面是初始化--------------------------*/
+
+.all{
+    margin: 50px;
+}
+.part-1{
+    width: 100%;
+    border: 1px solid #B9B9B9;
+    background-color: #F3F3F3;
+}
+.part-1 .row-1{
+    display: flex;
+}
+.part-1 .row-1 div{
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #B9B9B9;
+    background-color: #D8D8D8;
+    box-sizing: border-box;
+}
+.part-1 .row-2{
+    display: flex;
+    justify-content: flex-end;
+}
+.part-1 .row-2 div{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #B9B9B9;
+    background-color: #D8D8D8;
+    box-sizing: border-box;
+}
+.part-1 .row-3{
+    /*先列再行，按列排的flex布局*/
+    display: flex;
+    flex-direction: column;
+}
+.part-1 .row-3 .subrow{
+    /*先列再行，按行排的flex布局*/
+    display: flex;
+}
+.part-1 .row-3 .subrow div{
+    height: 100px;
+    border: 1px solid #B9B9B9;
+    background-color: #D8D8D8;
+}
+.part-1 .row-3 .col-12{
+    /*等比例分配*/
+    flex-grow: 1;
+    margin: 10px;
+    box-sizing: border-box;
+}
+.part-1 .row-3 .subrow-2{
+    margin-right: 10px;
+}
+.part-1 .row-3 .col-6{
+    flex-grow: 1;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+.part-1 .row-3 .subrow-3{
+    margin-right: 10px;
+}
+.part-1 .row-3 .col-4{
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.part-1 .row-3 .subrow-4{
+    margin-right: 10px;
+}
+.part-1 .row-3 .col-3{
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.part-1 .row-4{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.part-1 .row-4 .subrow{
+    display: flex;
+}
+.part-1 .row-4 .subrow div{
+    border: 1px solid #B9B9B9;
+    background-color: #D8D8D8;
+}
+.part-1 .row-4 .subrow-1 div,.part-1 .row-4 .subrow-3 div{
+    height: 50px;
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.part-1 .row-4 .subrow-1 div{
+    margin-bottom: 10px;
+}
+.part-1 .row-4 .subrow-3 div{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.part-1 .row-4 .subrow-2 .left-side,.part-1 .row-4 .subrow-2 .right-side{
+    width: 80px;
+    min-height: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.part-1 .row-4 .subrow-2 .center{
+    flex-grow: 1;
+}
+.part-2{
+    width: 100%;
+    border: 1px solid #B9B9B9;
+    background-color: #F3F3F3;
+    margin-top: 60px;
+}
+.part-2 .block{
+    display: flex;
+    margin: 30px 20px 30px 10px;
+}
+.part-2 img{
+    width: 100px;
+    height: 100px;
+    /*设置了flex布局后，空间不足时，flex-shrink的值默认为1，会自动缩小，
+    当图片不能正常显示时就会自动缩小，不再占据100*100的位置，
+    所以把img的flex-shrink属性值设置为0，就不会自动缩小了*/
+    flex-shrink: 0;
+}
+.part-2 p{
+    margin-left: 15px;
+}
