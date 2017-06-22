@@ -107,7 +107,7 @@ select {
     display: flex;
     justify-content: space-between;
 }
-.top-banner .foward-slash{
+.top-banner .forward-slash{
     color: #FFFFFF;
     font-size: 16px;
     opacity: 0.3;
@@ -123,10 +123,10 @@ select {
     font-size: 44px;
     color: #FFFFFF;
 }
-.top-banner .right{
-    position: relative;
-    z-index: 1;
-}
+/*.top-banner .right{*/
+    /*position: relative;*/
+    /*z-index: 1;*/
+/*}*/
 .top-banner .left{
     display: flex;
     justify-content: flex-end;
