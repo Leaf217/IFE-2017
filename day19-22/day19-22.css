@@ -69,7 +69,10 @@ select {
     flex-direction: column;
     align-items: center;
 }
+
+/*导航栏*/
 .navi {
+    /*position: relative;*/
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -84,24 +87,56 @@ select {
     width: 50px;
     height: 50px;
 }
-.navi ul {
+.navi .main-menu {
     display: flex;
     margin-right: 240px;
-    margin-top: 35px;
 }
-.navi ul li {
-    margin-left: 50px;
+.navi .main-menu>li {
+    padding-left: 15px;
+    padding-top: 35px;
 }
-.navi a {
+.navi .main-menu a {
     font-size: 16px;
     text-decoration: none;
-}
-.navi a:link,
-.navi a:visited,
-.navi a:hover,
-.navi a:active {
     color: #fff;
 }
+.navi .main-menu>li:hover {
+    background-color: #333;
+}
+/*HOME&PRODUCT等之间的间隔改小了，改成了35px*/
+.navi .main-menu li:nth-child(4) {
+    position: relative;
+    margin-left: 20px;
+    padding-right: 5px;
+}
+.navi .main-menu li:nth-child(3) {
+    margin-left: 20px;
+    padding-right: 5px;
+}
+.navi .main-menu li:nth-child(2) {
+    margin-left: 5px;
+    padding-right: 5px;
+}
+.navi .main-menu li:nth-child(1) {
+    padding-right: 20px;
+}
+.navi .submenu-3 {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    text-align: right;
+    background-color: #333;
+    visibility: hidden;
+}
+.navi .submenu-3>li {
+    padding-right: 5px;
+    width: 160px;
+    height: 25px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/*上部的banner*/
 .top-banner {
     display: flex;
     justify-content: space-between;
@@ -139,6 +174,8 @@ select {
     width: 50%;
     /*隐藏图片的超出部分*/
 }
+
+/*三个模块*/
 .module {
     display: flex;
     justify-content: space-between;
@@ -176,27 +213,100 @@ select {
     margin-right: 50px;
     font-size: 16px;
 }
-.center-banner {
+
+/*轮播图*/
+.carousel {
     position: relative;
+}
+#images {
+    position: relative;
+    overflow: hidden;
     margin-top: 20px;
+    margin-bottom: 10px;
     width: 960px;
     height: 180px;
 }
-.center-banner p {
+#images #list {
+    position: absolute;
+    left: -960px;
+    width: 5760px;
+    height: 180px;
+}
+#images img {
+    float: left;
+    width: 960px;
+    height: 180px;
+}
+#images p {
     position: absolute;
     top: 155px;
     left: 15px;
     font-size: 16px;
     color: #fff;
 }
+.carousel .on {
+    background-color: #999;
+}
+.carousel .arrow {
+    position: absolute;
+    top: 80px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 39px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background-color: RGBA(0,0,0,.3);
+}
+.carousel .arrow:hover {
+    background-color: RGBA(0,0,0,.7);
+}
+.carousel:hover .arrow { display: block;}
+.carousel #prev {
+    left: 10px;
+}
+.carousel #next {
+    right: 10px;
+}
+
+.carousel #buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 270px;
+}
+.carousel span{
+    border: none;
+    height: 3px;
+    width: 60px;
+    background-color: #eee;
+}
+
+
+
+/*联动表格*/
 .tab {
     margin-top: 15px;
     margin-bottom: 50px;
     width: 960px;
 }
+.tab .on {
+    border-top: 2px solid #9b9b9b;
+    border-right: 2px solid #9b9b9b;
+    border-left: 2px solid #9b9b9b;
+}
+.tab .off {
+    border-bottom: 2px solid #9b9b9b;
+}
 .tab ul {
     display: flex;
     height: 60px;
+}
+.tab ul a{
+    text-decoration: none;
 }
 .tab ul li {
     flex-grow: 1;
@@ -205,20 +315,14 @@ select {
     font-size: 24px;
     text-align: center;
 }
-.tab ul li:nth-child(1),
-.tab ul li:nth-child(3),
-.tab ul li:nth-child(4) {
-    border-bottom: 2px solid #9b9b9b;
-}
-.tab ul li:nth-child(2) {
-    border-top: 2px solid #9b9b9b;
-    border-right: 2px solid #9b9b9b;
-    border-left: 2px solid #9b9b9b;
-}
 .tab .detail{
+    position: relative;
     margin-top: 50px;
 }
 .tab .detail table {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 960px;
 }
 .tab .detail caption {
@@ -230,6 +334,9 @@ select {
     font-size: 18px;
     font-weight: 700;
 }
+.tab .detail tr:nth-child(1) {
+    border-top: 2px solid #bbb;
+}
 .tab .detail tr {
     border-bottom: 2px solid #e4e4e4;
 }
@@ -238,9 +345,7 @@ select {
     height: 58px;
     text-align: center;
 }
-.tab .detail table {
-    border-top: 2px solid #bbbbbb;
-}
+
 .detail tr:nth-child(6) td:nth-child(2) {
     color: #417505;
 }
@@ -260,22 +365,33 @@ select {
     box-sizing: border-box;
     font-size: 14px;
 }
+.detail .off {
+     display: none;
+ }
+
+
+/*底部banner*/
 .bottom-banner {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
+    /*margin-top这么高的原因是上边的表格叠了四个之后，底部的这个banner会跑到上边*/
+    /*没找到其他可以解决的方法*/
+    margin-top: 470px;
     margin-bottom: 65px;
     /*将div的长宽设置为与背景图片的长宽相同，背景图就会全部显示*/
     width: 960px;
     height: 220px;
     background-image: url(images/banner-bottom.png);
 }
+.bottom-banner form {
+    display: flex;
+    flex-direction: column;
+}
 .bottom-banner .submit {
     display: flex;
     margin-left: 80px;
 }
-.bottom-banner select,
-.bottom-banner .submit .input-1 {
+.bottom-banner .select-1,
+.bottom-banner .select-2,
+.bottom-banner .input-1 {
     border: solid 1px #cfd3d8;
     /*去除默认的圆角*/
     border-radius: 0 0;
@@ -288,6 +404,8 @@ select {
     color: #e9e9e9;
     background-color: #fff;
 }
+
+
 .bottom-banner .submit .input-2 {
     /*从图中可以测量出来*/
     border-radius: 6px/6px;
@@ -305,26 +423,47 @@ select {
     font-weight: 700;
     color: #fff;
 }
-.bottom-banner select {
+#countries,
+#cities {
     margin-left: 80px;
     /*隐藏默认按钮*/
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+       -moz-appearance: none;
+            appearance: none;
 }
-.bottom-banner .select-1 {
+#countries {
     margin-top: 40px;
     background-image: url(images/tria.png);
     background-repeat: no-repeat;
     background-position: 195px 10px;
 }
-.bottom-banner .select-2 {
+#cities {
     margin-top: 15px;
     margin-bottom: 15px;
     background-image: url(images/tria.png);
     background-repeat: no-repeat;
     background-position: 195px 10px;
 }
+.bottom-banner .country,
+.bottom-banner .city {
+    position: relative;
+}
+.bottom-banner img {
+    width: 19px;
+    height: 14px;
+}
+/*.bottom-banner .country img{*/
+    /*position: absolute;*/
+    /*top: 50px;*/
+    /*left: 275px;*/
+/*}*/
+/*.bottom-banner .city img{*/
+    /*position: absolute;*/
+    /*top: 25px;*/
+    /*left: 275px;*/
+/*}*/
+
+/*版权*/
 .version p {
     font-size: 14px;
 }

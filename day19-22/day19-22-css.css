@@ -69,7 +69,10 @@ select {
     flex-direction: column;
     align-items: center;
 }
+
+/*导航栏*/
 .navi {
+    /*position: relative;*/
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -84,24 +87,59 @@ select {
     width: 50px;
     height: 50px;
 }
-.navi ul {
+.navi .main-menu {
     display: flex;
     margin-right: 240px;
-    margin-top: 35px;
 }
-.navi ul li {
-    margin-left: 50px;
+.navi .main-menu>li {
+    padding-left: 15px;
+    padding-top: 35px;
 }
-.navi a {
+.navi .main-menu a {
     font-size: 16px;
     text-decoration: none;
-}
-.navi a:link,
-.navi a:visited,
-.navi a:hover,
-.navi a:active {
     color: #fff;
 }
+.navi .main-menu>li:hover ul{
+    visibility: visible;
+}
+.navi .main-menu>li:hover {
+    background-color: #333;
+}
+/*HOME&PRODUCT等之间的间隔改小了，改成了35px*/
+.navi .main-menu li:nth-child(4) {
+    position: relative;
+    margin-left: 20px;
+    padding-right: 5px;
+}
+.navi .main-menu li:nth-child(3) {
+    margin-left: 20px;
+    padding-right: 5px;
+}
+.navi .main-menu li:nth-child(2) {
+    margin-left: 5px;
+    padding-right: 5px;
+}
+.navi .main-menu li:nth-child(1) {
+    padding-right: 20px;
+}
+.navi .submenu-3 {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    text-align: right;
+    background-color: #333;
+    visibility: hidden;
+}
+.navi .submenu-3>li {
+    padding-right: 5px;
+    width: 160px;
+    height: 25px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/*上部banner*/
 .top-banner {
     display: flex;
     justify-content: space-between;
@@ -139,6 +177,8 @@ select {
     width: 50%;
     /*隐藏图片的超出部分*/
 }
+
+/*三个模块*/
 .module {
     display: flex;
     justify-content: space-between;
@@ -176,6 +216,8 @@ select {
     margin-right: 50px;
     font-size: 16px;
 }
+
+/*中部banner*/
 .center-banner {
     position: relative;
     margin-top: 20px;
@@ -189,6 +231,8 @@ select {
     font-size: 16px;
     color: #fff;
 }
+
+/*联动表格*/
 .tab {
     margin-top: 15px;
     margin-bottom: 50px;
@@ -260,6 +304,8 @@ select {
     box-sizing: border-box;
     font-size: 14px;
 }
+
+/*底部banner*/
 .bottom-banner {
     display: flex;
     flex-direction: column;
@@ -325,6 +371,8 @@ select {
     background-repeat: no-repeat;
     background-position: 195px 10px;
 }
+
+/*版权*/
 .version p {
     font-size: 14px;
 }

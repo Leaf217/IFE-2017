@@ -2,31 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>day12</title>
-    <link rel="stylesheet" href="day12.css">
+    <title>day19-22 用css实现下拉菜单</title>
+    <link rel="stylesheet" href="day19-22-css.css">
 </head>
 <body>
     <div class="all">
+        <!--导航栏-->
         <div class="navi">
             <img src="images/top.png" alt="sign" class="sign">
-            <ul>
+            <ul class="main-menu">
                 <li>
                     <a href="#">HOME</a>
                 </li>
                 <li>
-                    <a href="#">PRODUCT</a>
-                    <img src="images/top-tira.png" alt="top-triangle">
+                    <a href="#">PRODUCT<img src="images/top-tira.png" alt="top-triangle"></a>
+
                 </li>
                 <li>
-                    <a href="#">SUPPORT</a>
-                    <img src="images/top-tira.png" alt="top-triangle">
+                    <a href="#">SUPPORT<img src="images/top-tira.png" alt="top-triangle"></a>
+
                 </li>
                 <li>
-                    <a href="#">ABOUT</a>
-                    <img src="images/top-tira.png" alt="top-triangle">
+                    <a href="#">ABOUT<img src="images/top-tira.png" alt="top-triangle"></a>
+                    <ul class="submenu-3">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Join us</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
+
+        <!--上部banner-->
         <div class="top-banner">
             <div class="left">
                 <!--加上这个div是为了实现在页面较窄时，裁剪左侧，margin-right是不变的-->
@@ -44,8 +51,8 @@
                 <img src="images/banner-top.png" alt="banner-top">
             </div>
         </div>
-        <!--<div class="left-v">-->
-        <!--</div>-->
+
+        <!--三个模块-->
         <div class="module">
             <div class="one same">
                 <div class="title">
@@ -90,6 +97,8 @@
                 </p>
             </div>
         </div>
+
+        <!--中部banner-->
         <div class="center-banner">
             <img src="images/banner-center.png" alt="center-banner">
             <p>SOME TEXT</p>
@@ -100,6 +109,8 @@
             <img src="images/lightgrey-bar.png" alt="second-bar">
             <img src="images/lightgrey-bar.png" alt="third-bar">
         </div>
+
+        <!--联动表格-->
         <div class="tab">
             <ul>
                 <li>
@@ -157,6 +168,8 @@
                 </table>
             </div>
         </div>
+
+        <!--底部banner-->
         <div class="bottom-banner">
             <select name="country" id="country" class="select-1">
                 <option value="look">select your country</option>
@@ -169,6 +182,8 @@
                 <input type="submit" value="submit" class="input-2">
             </div>
         </div>
+
+        <!--版权-->
         <div class="version">
             <p>
                 &copy;2017 IFE
