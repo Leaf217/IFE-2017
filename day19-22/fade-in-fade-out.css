@@ -1,0 +1,475 @@
+@charset "utf-8";
+html {
+    color:#000;
+    background:#fff;
+}
+* {
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,
+img {
+    border:0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style:normal;
+    font-weight:normal;
+}
+
+ol,
+ul {
+    list-style:none;
+}
+
+caption,
+th {
+    text-align:left;
+}
+h1,
+h2,
+h3 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,
+q:after {
+    content:'';
+}
+sup {
+    vertical-align:text-top;
+}
+sub {
+    vertical-align:text-bottom;
+}
+input,
+textarea,
+select {
+    font-family:inherit;
+    font-size:inherit;
+    font-weight:inherit;
+    *font-size:100%; /*to enable resizing for IE*/
+}
+
+/*---------------------华丽的分界线，上面是初始化--------------------------*/
+
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*导航栏*/
+.navi {
+    /*position: relative;*/
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: #000000;
+}
+.navi .sign {
+    /*当图片不能正常显示时，也不缩小*/
+    flex-shrink: 0;
+    margin-left: 240px;
+    margin-top: 15px;
+    width: 50px;
+    height: 50px;
+}
+.navi .main-menu {
+    display: flex;
+    margin-right: 240px;
+}
+.navi .main-menu>li {
+    padding-left: 15px;
+    padding-top: 35px;
+}
+.navi .main-menu a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+}
+.navi .main-menu>li:hover {
+    background-color: #333;
+}
+/*HOME&PRODUCT等之间的间隔改小了，改成了35px*/
+.navi .main-menu li:nth-child(4) {
+    position: relative;
+    margin-left: 20px;
+    padding-right: 5px;
+}
+.navi .main-menu li:nth-child(3) {
+    margin-left: 20px;
+    padding-right: 5px;
+}
+.navi .main-menu li:nth-child(2) {
+    margin-left: 5px;
+    padding-right: 5px;
+}
+.navi .main-menu li:nth-child(1) {
+    padding-right: 20px;
+}
+.navi .submenu-3 {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    text-align: right;
+    background-color: #333;
+    visibility: hidden;
+}
+.navi .submenu-3>li {
+    padding-right: 5px;
+    width: 160px;
+    height: 25px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/*上部的banner*/
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 260px;
+    background-color: #2d7079;
+
+}
+.top-banner .forward-slash {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    opacity: .3;
+}
+.top-banner .p1 {
+    font-size: 32px;
+    color: #fff;
+    /*设置元素的不透明级别，0-1，从完全透明到完全不透明*/
+    opacity: .5;
+}
+.top-banner .p2 {
+    font-size: 44px;
+    color: #fff;
+}
+.top-banner .left {
+    display: flex;
+    justify-content: flex-end;
+}
+.top-banner .left div {
+    margin-right: 195px;
+}
+.top-banner .left,
+.top-banner .right {
+    overflow: hidden;
+    width: 50%;
+    /*隐藏图片的超出部分*/
+}
+
+/*三个模块*/
+.module {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 960px;
+}
+.module .same {
+    border: 1px solid #eeeeee;
+    /*不包括边框的长度和高度*/
+    width: 310px;
+    height: 240px;
+}
+.module .title {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px 30px 20px;
+}
+.module h1 {
+    font-size: 48px;
+}
+.module h2 {
+    font-size: 24px;
+}
+.module .one img {
+    width: 80px;
+    height: 86px;
+}
+.module .two img,
+.module .three img {
+    width: 80px;
+    height: 80px;
+}
+.module p {
+    margin-left: 20px;
+    margin-right: 50px;
+    font-size: 16px;
+}
+
+/*轮播图*/
+#images {
+    position: relative;
+    /*overflow: hidden;*/
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 960px;
+    height: 180px;
+}
+.image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 960px;
+    height: 180px;
+    opacity: 0;
+    /*for IE*/
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity .3s linear;
+       -moz-transition: opacity .3s linear;
+         -o-transition: opacity .3s linear;
+            transition: opacity .3s linear;
+}
+#images p {
+    position: absolute;
+    top: 155px;
+    left: 15px;
+    font-size: 16px;
+    color: #fff;
+}
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 270px;
+}
+.carousel span{
+    border: none;
+    height: 3px;
+    width: 60px;
+}
+.fade-in {
+    opacity: 100;
+    filter: alpha(opacity=100);
+    -webkit-transition: opacity .3s linear;
+       -moz-transition: opacity .3s linear;
+         -o-transition: opacity .3s linear;
+            transition: opacity .3s linear;
+}
+.carousel .on {
+    background-color: #999;
+}
+.carousel .off {
+    background-color: #eee;
+}
+
+
+
+/*联动表格*/
+.tab {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    width: 960px;
+}
+.tab .on {
+    border-top: 2px solid #9b9b9b;
+    border-right: 2px solid #9b9b9b;
+    border-left: 2px solid #9b9b9b;
+}
+.tab .off {
+    border-bottom: 2px solid #9b9b9b;
+}
+.tab ul {
+    display: flex;
+    height: 60px;
+}
+.tab ul a{
+    text-decoration: none;
+}
+.tab ul li {
+    flex-grow: 1;
+    align-self: center;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+}
+.tab .detail{
+    position: relative;
+    margin-top: 50px;
+}
+.tab .detail table {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 960px;
+}
+.tab .detail caption {
+    margin-bottom: 50px;
+}
+.tab .detail .head,
+.tab .detail caption,
+.tab .detail .price {
+    font-size: 18px;
+    font-weight: 700;
+}
+.tab .detail tr:nth-child(1) {
+    border-top: 2px solid #bbb;
+}
+.tab .detail tr {
+    border-bottom: 2px solid #e4e4e4;
+}
+.tab .detail td {
+    width: 240px;
+    height: 58px;
+    text-align: center;
+}
+
+.detail tr:nth-child(6) td:nth-child(2) {
+    color: #417505;
+}
+.detail tr:nth-child(6) td:nth-child(3) {
+    color: #89b4e7;
+}
+.detail tr:nth-child(6) td:nth-child(4) {
+    color: #d1031c;
+}
+.detail tr td:nth-child(1),
+.detail tr td:nth-child(3) {
+    background-color: #eeeeee;
+}
+.detail .content {
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.detail .off {
+    display: none;
+}
+
+/*底部banner*/
+.bottom-banner {
+    /*margin-top这么高的原因是上边的表格叠了四个之后，底部的这个banner会跑到上边*/
+    /*没找到其他可以解决的方法*/
+    margin-top: 470px;
+    margin-bottom: 65px;
+    /*将div的长宽设置为与背景图片的长宽相同，背景图就会全部显示*/
+    width: 960px;
+    height: 220px;
+    background-image: url(images/banner-bottom.png);
+}
+.bottom-banner form {
+    display: flex;
+    flex-direction: column;
+}
+.bottom-banner .submit {
+    display: flex;
+    margin-left: 80px;
+}
+.bottom-banner .select-1,
+.bottom-banner .select-2,
+.bottom-banner .input-1 {
+    border: solid 1px #cfd3d8;
+    /*去除默认的圆角*/
+    border-radius: 0 0;
+    width: 225px;
+    height: 35px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 12px;
+    color: #e9e9e9;
+    background-color: #fff;
+}
+.bottom-banner .submit .input-2 {
+    /*从图中可以测量出来*/
+    border-radius: 6px/6px;
+    width: 100px;
+    /*chrome中height不起作用*/
+    height: 40px;
+    margin-left: 7px;
+    /*加上bgc就好了！！为什么*/
+    /*设置submit按钮的渐变色*/
+    background: linear-gradient(top,#fff,#8eb5e3);
+    background: -moz-linear-gradient(top,#fff,#8eb5e3);
+    background: -webkit-linear-gradient(top,#fff,#8eb5e3);
+    border: solid 1px #e5e8ec;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+}
+#countries,
+#cities {
+    margin-left: 80px;
+    /*隐藏默认按钮*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+#countries {
+    margin-top: 40px;
+    background-image: url(images/tria.png);
+    background-repeat: no-repeat;
+    background-position: 195px 10px;
+}
+#cities {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-image: url(images/tria.png);
+    background-repeat: no-repeat;
+    background-position: 195px 10px;
+}
+.bottom-banner .country,
+.bottom-banner .city {
+    position: relative;
+}
+.bottom-banner img {
+    width: 19px;
+    height: 14px;
+}
+#noti-1,
+#noti-2 {
+    position: absolute;
+    color: #eaeaea;
+    font-size: 10px;
+}
+#noti-1 {
+    top: 50px;
+    left: 82px;
+}
+#noti-2 {
+    top: 25px;
+    left: 82px;
+}
+#country-div,
+#city-div {
+    display: none;
+    position: absolute;
+    left: 80px;
+    border: 2px solid #e5e8ec;
+    width: 220px;
+    z-index: 1;
+    font-size: 14px;
+    color: #b2bac5;
+    background-color: #fff;
+}
+#city-div {
+    top: 50px;
+}
+#city-div p,
+#country-div p {
+    cursor: pointer;
+}
+
+/*版权*/
+.version p {
+    font-size: 14px;
+}

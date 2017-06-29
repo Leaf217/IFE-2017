@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>day19-22 用js实现下拉菜单</title>
-    <link rel="stylesheet" href="day19-22.css">
-    <script type="text/javascript" src="day19-22slide.js"></script>
-    <!--<script type="text/javascript" src="day19-22fade.js"></script>-->
+    <title>day19-22</title>
+    <link rel="stylesheet" href="slide.css">
+    <script type="text/javascript" src="slide.js"></script>
+    <!--<script type="text/javascript" src="fade-in-fade-out.js"></script>-->
 </head>
 <body>
 <div class="all">
@@ -308,14 +308,16 @@
         <form action="">
             <div class="country">
                 <select name="country" id="countries" class="select-1">
-                    <option value="0">select your country</option>
                 </select>
+                <p id="noti-1">select your country</p>
+                <div id="country-div"></div>
                 <!--<img src="images/tria.png" alt="triangle1">-->
             </div>
             <div class="city">
                 <select name="city" id="cities" class="select-2">
-                    <option value="0">select your city</option>
                 </select>
+                <p id="noti-2">select your city</p>
+                <div id="city-div"></div>
                 <!--<img src="images/tria.png" alt="triangle2">-->
             </div>
             <div class="submit">

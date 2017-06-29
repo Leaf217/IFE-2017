@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fade-in-fade-out</title>
+    <link rel="stylesheet" href="fade-in-fade-out.css">
+    <script type="text/javascript" src="fade-in-fade-out.js"></script>
+</head>
+<body>
+<div class="all">
+    <!--导航栏-->
+    <div class="navi">
+        <img src="images/top.png" alt="sign" class="sign">
+        <ul class="main-menu">
+            <li>
+                <a href="#">HOME</a>
+            </li>
+            <li>
+                <a href="#">PRODUCT<img src="images/top-tira.png" alt="top-triangle"></a>
+
+            </li>
+            <li>
+                <a href="#">SUPPORT<img src="images/top-tira.png" alt="top-triangle"></a>
+
+            </li>
+            <li id="submenu">
+                <a href="#">ABOUT<img src="images/top-tira.png" alt="top-triangle"></a>
+                <ul class="submenu-3">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Join us</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!--上部banner-->
+    <div class="top-banner">
+        <div class="left">
+            <!--加上这个div是为了实现在页面较窄时，裁剪左侧，margin-right是不变的-->
+            <div>
+                <!--不知道图中类似于斜线的东西是怎么做出来的，所以在这里拿斜线代替-->
+                <p class="forward-slash">/</p>
+                <p class="p1">HELLO</p>
+                <p class="p1">WORLD</p>
+                <p class="p2">PRODUCT</p>
+                <p class="forward-slash">/</p>
+            </div>
+            <img src="images/left-v.png" alt="left-v">
+        </div>
+        <div class="right">
+            <img src="images/banner-top.png" alt="banner-top">
+        </div>
+    </div>
+
+    <!--三个模块-->
+    <div class="module">
+        <div class="one same">
+            <div class="title">
+                <div>
+                    <h1>One</h1>
+                    <h2>Level2 Title</h2>
+                </div>
+                <img src="images/one.png" alt="one">
+            </div>
+            <p>
+                Some text Some text Some text
+                Some text Some text Some text
+                Some text Some text
+            </p>
+        </div>
+        <div class="two same">
+            <div class="title">
+                <div>
+                    <h1>Two</h1>
+                    <h2>Level2 Title</h2>
+                </div>
+                <img src="images/two.png" alt="one">
+            </div>
+            <p>
+                Some text Some text Some text
+                Some text Some text Some text
+                Some text Some text
+            </p>
+        </div>
+        <div class="three same">
+            <div class="title">
+                <div>
+                    <h1>Three</h1>
+                    <h2>Level2 Title</h2>
+                </div>
+                <img src="images/three.png" alt="one">
+            </div>
+            <p>
+                Some text Some text Some text
+                Some text Some text Some text
+                Some text Some text
+            </p>
+        </div>
+    </div>
+
+    <!--轮播图-->
+    <div class="carousel">
+        <div id="images">
+            <img src="images/banner-center.png" alt="1"  class="image fade-in">
+            <img src="images/lunbo2.jpg" alt="2" class="image">
+            <img src="images/lunbo3.jpg" alt="3" class="image">
+            <img src="images/lunbo4.jpg" alt="4" class="image">
+            <p>SOME TEXT</p>
+        </div>
+        <div id="buttons" class="bar">
+            <span index="1" class="on"></span>
+            <span index="2" class="off"></span>
+            <span index="3" class="off"></span>
+            <span index="4" class="off"></span>
+        </div>
+    </div>
+
+
+    <!--联动表格-->
+    <div class="tab">
+        <ul id="tab-title">
+            <li class="on" id="li-0">
+                <a href="javascript:;">TABONE</a>
+            </li>
+            <li class="off" id="li-1">
+                <a href="javascript:;">TABTWO</a>
+            </li>
+            <li class="off" id="li-2">
+                <a href="javascript:;">TABTHR</a>
+            </li>
+            <li class="off" id="li-3">
+                <a href="javascript:;">TABFOR</a>
+            </li>
+        </ul>
+        <div id="tabs" class="detail">
+            <table id="tab-0">
+                <caption>Table One</caption>
+                <tr>
+                    <td></td>
+                    <td class="head">Free Version</td>
+                    <td class="head">Personal Version</td>
+                    <td class="head">Company Version</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature A</td>
+                    <td class="content">Some text 0 0 0 0</td>
+                    <td class="content">Some text 0 0 0 0</td>
+                    <td class="content">Some text 0 0 0 0</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature B</td>
+                    <td class="content">Some text 0 0 0 0</td>
+                    <td class="content">Some text 0 0 0 0</td>
+                    <td class="content">Some text 0 0 0 0</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature C</td>
+                    <td class="content">Some text 0 0 0 0</td>
+                    <td class="content">Some text 0 0 0 0</td>
+                    <td class="content">Some text 0 0 0 0</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature D</td>
+                    <td class="content">Some text 0 0 0 0</td>
+                    <td class="content">Some text 0 0 0 0</td>
+                    <td class="content">Some text 0 0 0 0</td>
+                </tr>
+                <tr>
+                    <td class="head">Price</td>
+                    <td class="price">Free</td>
+                    <td class="price">$9.99/<sup>mo</sup></td>
+                    <td class="price">$99.99/<sup>mo</sup></td>
+                </tr>
+            </table>
+
+            <table id="tab-1" class="off">
+                <caption>Table Two</caption>
+                <tr>
+                    <td></td>
+                    <td class="head">Free Version</td>
+                    <td class="head">Personal Version</td>
+                    <td class="head">Company Version</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature A</td>
+                    <td class="content">Some text 1 1 1 1</td>
+                    <td class="content">Some text 1 1 1 1</td>
+                    <td class="content">Some text 1 1 1 1</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature B</td>
+                    <td class="content">Some text 1 1 1 1</td>
+                    <td class="content">Some text 1 1 1 1</td>
+                    <td class="content">Some text 1 1 1 1</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature C</td>
+                    <td class="content">Some text 1 1 1 1</td>
+                    <td class="content">Some text 1 1 1 1</td>
+                    <td class="content">Some text 1 1 1 1</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature D</td>
+                    <td class="content">Some text 1 1 1 1</td>
+                    <td class="content">Some text 1 1 1 1</td>
+                    <td class="content">Some text 1 1 1 1</td>
+                </tr>
+                <tr>
+                    <td class="head">Price</td>
+                    <td class="price">Free</td>
+                    <td class="price">$9.99/<sup>mo</sup></td>
+                    <td class="price">$99.99/<sup>mo</sup></td>
+                </tr>
+            </table>
+
+            <table id="tab-2" class="off">
+                <caption>Table Three</caption>
+                <tr>
+                    <td></td>
+                    <td class="head">Free Version</td>
+                    <td class="head">Personal Version</td>
+                    <td class="head">Company Version</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature A</td>
+                    <td class="content">Some text 2 2 2 2</td>
+                    <td class="content">Some text 2 2 2 2</td>
+                    <td class="content">Some text 2 2 2 2</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature B</td>
+                    <td class="content">Some text 2 2 2 2</td>
+                    <td class="content">Some text 2 2 2 2</td>
+                    <td class="content">Some text 2 2 2 2</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature C</td>
+                    <td class="content">Some text 2 2 2 2</td>
+                    <td class="content">Some text 2 2 2 2</td>
+                    <td class="content">Some text 2 2 2 2</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature D</td>
+                    <td class="content">Some text 2 2 2 2</td>
+                    <td class="content">Some text 2 2 2 2</td>
+                    <td class="content">Some text 2 2 2 2</td>
+                </tr>
+                <tr>
+                    <td class="head">Price</td>
+                    <td class="price">Free</td>
+                    <td class="price">$9.99/<sup>mo</sup></td>
+                    <td class="price">$99.99/<sup>mo</sup></td>
+                </tr>
+            </table>
+
+            <table id="tab-3" class="off">
+                <caption>Table Four</caption>
+                <tr>
+                    <td></td>
+                    <td class="head">Free Version</td>
+                    <td class="head">Personal Version</td>
+                    <td class="head">Company Version</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature A</td>
+                    <td class="content">Some text 3 3 3 3</td>
+                    <td class="content">Some text 3 3 3 3</td>
+                    <td class="content">Some text 3 3 3 3</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature B</td>
+                    <td class="content">Some text 3 3 3 3</td>
+                    <td class="content">Some text 3 3 3 3</td>
+                    <td class="content">Some text 3 3 3 3</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature C</td>
+                    <td class="content">Some text 3 3 3 3</td>
+                    <td class="content">Some text 3 3 3 3</td>
+                    <td class="content">Some text 3 3 3 3</td>
+                </tr>
+                <tr>
+                    <td class="head">Feature D</td>
+                    <td class="content">Some text 3 3 3 3</td>
+                    <td class="content">Some text 3 3 3 3</td>
+                    <td class="content">Some text 3 3 3 3</td>
+                </tr>
+                <tr>
+                    <td class="head">Price</td>
+                    <td class="price">Free</td>
+                    <td class="price">$9.99/<sup>mo</sup></td>
+                    <td class="price">$99.99/<sup>mo</sup></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--底部banner-->
+    <div class="bottom-banner">
+        <form action="">
+            <div class="country">
+                <select name="country" id="countries" class="select-1">
+                </select>
+                <p id="noti-1">select your country</p>
+                <div id="country-div"></div>
+                <!--<img src="images/tria.png" alt="triangle1">-->
+            </div>
+            <div class="city">
+                <select name="city" id="cities" class="select-2">
+                </select>
+                <p id="noti-2">select your city</p>
+                <div id="city-div"></div>
+                <!--<img src="images/tria.png" alt="triangle2">-->
+            </div>
+            <div class="submit">
+                <input type="email" placeholder="input your e-mail address" class="input-1">
+                <input type="submit" value="submit" class="input-2">
+            </div>
+        </form>
+    </div>
+
+    <!--版权-->
+    <div class="version">
+        <p>
+            &copy;2017 IFE
+        </p>
+    </div>
+</div>
+</body>
+</html>

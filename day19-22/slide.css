@@ -369,7 +369,6 @@ select {
      display: none;
  }
 
-
 /*底部banner*/
 .bottom-banner {
     /*margin-top这么高的原因是上边的表格叠了四个之后，底部的这个banner会跑到上边*/
@@ -404,8 +403,6 @@ select {
     color: #e9e9e9;
     background-color: #fff;
 }
-
-
 .bottom-banner .submit .input-2 {
     /*从图中可以测量出来*/
     border-radius: 6px/6px;
@@ -430,6 +427,7 @@ select {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
+    cursor: pointer;
 }
 #countries {
     margin-top: 40px;
@@ -452,16 +450,39 @@ select {
     width: 19px;
     height: 14px;
 }
-/*.bottom-banner .country img{*/
-    /*position: absolute;*/
-    /*top: 50px;*/
-    /*left: 275px;*/
-/*}*/
-/*.bottom-banner .city img{*/
-    /*position: absolute;*/
-    /*top: 25px;*/
-    /*left: 275px;*/
-/*}*/
+#noti-1,
+#noti-2 {
+    position: absolute;
+    color: #eaeaea;
+    font-size: 10px;
+}
+#noti-1 {
+    top: 50px;
+    left: 82px;
+}
+#noti-2 {
+    top: 25px;
+    left: 82px;
+}
+#country-div,
+#city-div {
+    display: none;
+    position: absolute;
+    left: 80px;
+    border: 2px solid #e5e8ec;
+    width: 220px;
+    z-index: 1;
+    font-size: 14px;
+    color: #b2bac5;
+    background-color: #fff;
+}
+#city-div {
+    top: 50px;
+}
+#city-div p,
+#country-div p {
+    cursor: pointer;
+}
 
 /*版权*/
 .version p {

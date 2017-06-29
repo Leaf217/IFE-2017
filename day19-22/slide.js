@@ -26,8 +26,6 @@ window.onload = function () {
     }
 
 
-    //轮播图
-
     //滑动效果的轮播图
     function animate(offset) {
         if (offset == 0) {
@@ -167,30 +165,69 @@ window.onload = function () {
 
 
     //下拉菜单
+    var countryDiv = document.getElementById('country-div');
+    var cityDiv = document.getElementById('city-div');
+    var countryArr = new Array("无", "中国", "美国", "英国");
+    var cityArr = new Array();
+
+    var country = countryDiv.getElementsByTagName('p');
+    var city = cityDiv.getElementsByTagName('p');
+    var notiO = document.getElementById('noti-1');
+    var notiT = document.getElementById('noti-2');
     var countries = document.getElementById('countries');
     var cities = document.getElementById('cities');
-    var countryArr = new Array(new Option("无", 'none'), new Option("中国", 'China'), new Option("美国", 'USA'), new Option("英国",'UK'));
-    var cityArr = new Array();
-    cityArr[0] = new Array(new Option("无", 'none'));
-    cityArr[1] = new Array(new Option("北京", 'bj'), new Option("上海", 'sh'), new Option("广州", 'gz'));
-    cityArr[2] = new Array(new Option("洛杉矶", 'la'), new Option("纽约", 'ny'), new Option("旧金山", 'sf'));
-    cityArr[3] = new Array(new Option("伦敦", 'ld'), new Option("利物浦", 'lp'), new Option("曼彻斯特", 'mc'));
+
+    cityArr[0] = new Array("无");
+    cityArr[1] = new Array("北京", "上海", "广州");
+    cityArr[2] = new Array("洛杉矶", "纽约", "旧金山");
+    cityArr[3] = new Array("伦敦", "利物浦", "曼彻斯特");
 
     //动态载入所有国家
-    function load(){
-        for(var i = 0;i < countryArr.length;i++){
-            countries.options[i] = countryArr[i];
+    function load() {
+        for (var i = 0;i < countryArr.length;i++) {
+            var node = document.createElement('p');
+            node.innerHTML = countryArr[i];
+            countryDiv.appendChild(node);
         }
     }
     load();
+
     //根据选择的国家，动态显示城市
-    function changeCity() {
-        //获取国家一级的下拉列表选中的索引
-        var index = countries.selectedIndex;
-        console.log(cityArr[index].length)
-        for(var i = 0;i < cityArr[index].length;i++){
-            cities.options[i]=cityArr[index][i];
-        }
+    for (var i = 0;i < country.length;i++) {
+        country[i].addEventListener("click", function () {
+            cityDiv.innerHTML = ""; //清除二级列表
+            var index = countryArr.indexOf(this.innerHTML); //获取countryArr中的与indexOf后边括号中相同字符串的索引值
+            for (var j = 0;j < cityArr[index].length;j++) {
+                var node = document.createElement('p');
+                node.innerHTML = cityArr[index][j];
+                cityDiv.appendChild(node);
+                city[j].addEventListener("click", function () {
+                    notiT.innerHTML = this.innerHTML; //点击的是哪个城市就会显示哪个城市
+                    hidd(cityDiv);
+                    disp(notiT);
+                    // notiT.style.display = "block";
+                })
+            }
+            notiO.innerHTML = this.innerHTML; //点击的是哪个国家就会显示哪个国家
+            notiT.innerHTML = cityDiv.getElementsByTagName('p')[0].innerHTML; //城市列表默认显示第一个城市
+            hidd(countryDiv);//国家点击完毕后，隐藏
+            disp(notiO);//在框中显示点击的国家名字
+
+        })
     }
-    countries.addEventListener("change", changeCity);
+    countries.onclick = function () {
+        disp(countryDiv);
+        hidd(notiO);
+    }
+    cities.onclick = function () {
+        disp(cityDiv);
+        hidd(notiT);
+    }
+    function disp(elem) {
+        elem.style.display = "block";
+    }
+    function hidd(elem) {
+        elem.style.display = "none";
+    }
+
 }
