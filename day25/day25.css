@@ -1,0 +1,212 @@
+@charset "utf-8";
+html {
+    color:#000;
+    background:#fff;
+}
+* {
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,
+img {
+    border:0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style:normal;
+    font-weight:normal;
+}
+
+ol,
+ul {
+    list-style:none;
+}
+
+caption,
+th {
+    text-align:left;
+}
+h1,
+h2,
+h3 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,
+q:after {
+    content:'';
+}
+sup {
+    vertical-align:text-top;
+}
+sub {
+    vertical-align:text-bottom;
+}
+input,
+textarea,
+select {
+    font-family:inherit;
+    font-size:inherit;
+    font-weight:inherit;
+    *font-size:100%; /*to enable resizing for IE*/
+}
+
+/*---------------------华丽的分界线，上面是初始化--------------------------*/
+
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*导航栏*/
+.navi {
+    /*position: relative;*/
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: #000000;
+}
+.navi .sign {
+    /*当图片不能正常显示时，也不缩小*/
+    flex-shrink: 0;
+    margin-left: 240px;
+    margin-top: 15px;
+    width: 50px;
+    height: 50px;
+}
+.navi .main-menu {
+    display: flex;
+    margin-right: 240px;
+}
+.navi .main-menu>li {
+    padding-left: 15px;
+    padding-top: 35px;
+}
+.navi .main-menu a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+}
+.navi .main-menu>li:hover {
+    background-color: #333;
+}
+/*HOME&PRODUCT等之间的间隔改小了，改成了35px*/
+.navi .main-menu li:nth-child(4) {
+    position: relative;
+    margin-left: 20px;
+    padding-right: 5px;
+}
+.navi .main-menu li:nth-child(3) {
+    margin-left: 20px;
+    padding-right: 5px;
+}
+.navi .main-menu li:nth-child(2) {
+    margin-left: 5px;
+    padding-right: 5px;
+}
+.navi .main-menu li:nth-child(1) {
+    padding-right: 20px;
+}
+.navi .submenu-3 {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    text-align: right;
+    background-color: #333;
+    visibility: hidden;
+}
+.navi .submenu-3>li {
+    padding-right: 5px;
+    width: 160px;
+    height: 25px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/*上部的banner*/
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 260px;
+    background-color: #2d7079;
+
+}
+.top-banner .forward-slash {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    opacity: .3;
+}
+.top-banner .p1 {
+    font-size: 32px;
+    color: #fff;
+    /*设置元素的不透明级别，0-1，从完全透明到完全不透明*/
+    opacity: .5;
+}
+.top-banner .p2 {
+    font-size: 44px;
+    color: #fff;
+}
+.top-banner .left {
+    display: flex;
+    justify-content: flex-end;
+}
+.top-banner .left div {
+    margin-right: 195px;
+}
+.top-banner .left,
+.top-banner .right {
+    overflow: hidden;
+    width: 50%;
+    /*隐藏图片的超出部分*/
+}
+
+/*表格&导航*/
+#tab {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 960px;
+}
+#tab-navi {
+    /*overflow: scroll;*/
+    float: left;
+    border: 1px solid #f2f2f2;
+    padding: 20px;
+    width: 180px;
+    /*height: 220px;*/
+    background-color: #eee;
+}
+#tab-navi li{
+    line-height: 30px;
+}
+#tab-con {
+    margin-left: 240px;
+}
+#tab-con th {
+    height: 50px;
+    background-color: #ddd;
+}
+#tab-con tr {
+    height: 50px;
+}
+#tab-con th,
+#tab-con td {
+    border: 1px solid #f2f2f2;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+}

@@ -205,7 +205,6 @@ window.onload = function () {
                     notiT.innerHTML = this.innerHTML; //点击的是哪个城市就会显示哪个城市
                     hidd(cityDiv);
                     disp(notiT);
-                    // notiT.style.display = "block";
                 })
             }
             notiO.innerHTML = this.innerHTML; //点击的是哪个国家就会显示哪个国家
