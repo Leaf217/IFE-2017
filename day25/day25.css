@@ -205,7 +205,6 @@ select {
 }
 #tab-con th {
     border: 1px solid #f2f2f2;
-
     text-align: center;
 }
 #tab-con td {
@@ -216,12 +215,4 @@ select {
 }
 .grey {
     background-color: #efefef;
-}
-.posi {
-    position: fixed;
-    top: 0;
-}
-.posi-off {
-    position: static;
-    top: auto;
 }
