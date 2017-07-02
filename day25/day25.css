@@ -182,12 +182,12 @@ select {
     width: 960px;
 }
 #tab-navi {
-    /*overflow: scroll;*/
+    overflow: scroll;
     float: left;
     border: 1px solid #f2f2f2;
     padding: 20px;
     width: 180px;
-    /*height: 100%;*/
+    height: 200px;
     background-color: #eee;
 }
 #tab-navi li{
@@ -203,7 +203,11 @@ select {
 #tab-con tr {
     height: 50px;
 }
-#tab-con th,
+#tab-con th {
+    border: 1px solid #f2f2f2;
+
+    text-align: center;
+}
 #tab-con td {
     border: 1px solid #f2f2f2;
     padding-left: 25px;
@@ -212,4 +216,12 @@ select {
 }
 .grey {
     background-color: #efefef;
+}
+.posi {
+    position: fixed;
+    top: 0;
+}
+.posi-off {
+    position: static;
+    top: auto;
 }

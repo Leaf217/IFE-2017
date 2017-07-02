@@ -12,10 +12,8 @@ window.onload = function () {
     // var availWidth = screen.availWidth;
     var availHeight = screen.availHeight;
     var rectNavi = tabNavi.getBoundingClientRect();//动态获取ul元素到视窗的距离，这是一个集合，有上下左右等的距离
-    // var rectCon = tabCon.getBoundingClientRect();
+    var rectCon = tabCon.getBoundingClientRect();
     var naviHei = rectNavi.bottom - rectNavi.top;
-    console.log(naviHei)
-
     //给表格添加背景色
     for (var i = 2;i < normalTr.length;i += 2) {
         normalTr[i].className = 'grey';
@@ -30,30 +28,26 @@ window.onload = function () {
      * 当滚动条离初始位置的距离 < 表格顶部离页面最顶部的距离时，表格标题正常显示，否则，将固定
      */
     function winScroll(){
-        if (document.body.scrollTop < tabCon.offsetTop) {
+        if (document.body.scrollTop < rectCon.top) {
             tab.style.position = '';
             fixedTr.style.position = '';
+            fixedTr.style.top = '';
             tabCon.style.position = '';
             tabCon.style.top = '';
-        } else if (document.body.scrollTop >= tabCon.offsetTop) {
+            tabNavi.style.position = '';
+            tabNavi.style.top = '';
+            tabNavi.style.height = availHeight - rectNavi.top - 150 + document.body.scrollTop + 'px';//availHeight - rectNavi就是tabnavi应该显示的高度
+            tabNavi.style.overflow = 'scroll';
+        } else if (document.body.scrollTop >= rectCon.top) {
+            tabNavi.style.height = availHeight -150 + 'px';
             tab.style.position = 'relative';
             tabCon.style.position = 'absolute';
             tabCon.style.top = '50px';
             // fixedTr.style.width = availWidth - rectCon.left - (availWidth - rectCon.right) + 'px';
             fixedTr.style.position = 'fixed';
             fixedTr.style.top = '0';
+            tabNavi.style.position = 'fixed';
+            tabNavi.style.top = '0';
         }
-        if (tabNavi.style.height <= naviHei + 'px') {
-            tabNavi.style.height = availHeight - rectNavi.top - 140 + document.body.scrollTop + 'px';//availHeight - rectNavi就是tabnavi应该显示的高度
-            tabNavi.style.overflow = 'scroll';
-        } else {
-            tabNavi.style.height = naviHei + 'px';
-            tabNavi.style.overflow = 'none';
-        }
-
     }
-
-
-
-
 }
