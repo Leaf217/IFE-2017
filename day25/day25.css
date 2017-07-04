@@ -193,25 +193,34 @@ select {
 #tab-navi li{
     line-height: 30px;
 }
-#tab-con {
+#tab-con,
+#tab-fixed {
     margin-left: 240px;
 }
-#tab-con th {
+#tab-con th,
+#tab-fixed th {
     height: 50px;
     background-color: #ddd;
 }
-#tab-con tr {
+#tab-con tr,
+#tab-fixed tr {
     height: 50px;
 }
-#tab-con th {
-    border: 1px solid #f2f2f2;
-    text-align: center;
-}
-#tab-con td {
+#tab-con th,
+#tab-con td,
+#tab-fixed th,
+#tab-fixed td {
     border: 1px solid #f2f2f2;
     padding-left: 25px;
     padding-right: 25px;
     text-align: center;
+}
+#tab-fixed {
+    position: fixed;
+    top: 0;
+    display: none;
+    height: 50px;
+    overflow: hidden;
 }
 .grey {
     background-color: #efefef;
