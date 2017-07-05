@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day29 json</title>
+    <link rel="stylesheet" href="day29.css">
+    <script type="text/javascript" src="script/day29.js"></script>
+    <script type="text/javascript" src="script/data.js"></script>
+</head>
+<body>
+    <div class="all">
+        <!--导航栏-->
+        <div class="navi">
+            <img src="../day19-22/images/top.png" alt="sign" class="sign">
+            <ul class="main-menu">
+                <li>
+                    <a href="#">HOME</a>
+                </li>
+                <li>
+                    <a href="#">PRODUCT<img src="../day19-22/images/top-tira.png" alt="top-triangle"></a>
+
+                </li>
+                <li>
+                    <a href="#">SUPPORT<img src="../day19-22/images/top-tira.png" alt="top-triangle"></a>
+
+                </li>
+                <li id="submenu">
+                    <a href="#">ABOUT<img src="../day19-22/images/top-tira.png" alt="top-triangle"></a>
+                    <ul class="submenu-3">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Join us</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!--上部banner-->
+        <div class="top-banner">
+            <div class="left">
+                <!--加上这个div是为了实现在页面较窄时，裁剪左侧，margin-right是不变的-->
+                <div>
+                    <!--不知道图中类似于斜线的东西是怎么做出来的，所以在这里拿斜线代替-->
+                    <p class="forward-slash">/</p>
+                    <p class="p1">HELLO</p>
+                    <p class="p1">WORLD</p>
+                    <p class="p2">PRODUCT</p>
+                    <p class="forward-slash">/</p>
+                </div>
+                <img src="../day19-22/images/left-v.png" alt="left-v">
+            </div>
+            <div class="right">
+                <img src="../day19-22/images/banner-top.png" alt="banner-top">
+            </div>
+        </div>
+
+        <!--表格&导航-->
+        <div id="tab">
+            <ul id="tab-navi">
+                <li class="level-1">Level 1 row1</li>
+                <li class="level-1">Level 1 row2</li>
+                <li class="level-1">Level 1 row3</li>
+                <li class="level-1">Level 1 row4</li>
+                <li class="level-1">Level 1 row5</li>
+                <li class="level-1">Level 1 row6</li>
+                <li class="level-1">Level 1 row7</li>
+                <li class="level-1">Level 1 row8</li>
+                <li class="level-1">Level 1 row9</li>
+                <li class="level-1">Level 1 row10</li>
+                <li class="level-1">Level 1 row11</li>
+                <li class="level-1">Level 1 row12</li>
+                <li class="level-1">Level 1 row13</li>
+                <li class="level-1">Level 1 row14</li>
+                <li class="level-1">Level 1 row15</li>
+                <li class="level-1">Level 1 row16</li>
+                <li class="level-1">Level 1 row17</li>
+                <li class="level-1">Level 1 row18</li>
+                <li class="level-1">Level 1 row19</li>
+                <li class="level-1">Level 1 row20</li>
+                <li class="level-1">Level 1 row21</li>
+                <li class="level-1">Level 1 row22</li>
+                <li class="level-1">Level 1 row23</li>
+                <li class="level-1">Level 1 row24</li>
+                <li class="level-1">Level 1 row25</li>
+                <li class="level-1">Level 1 row26</li>
+                <li class="level-1">Level 1 row27</li>
+            </ul>
+            <table id="tab-con">
+                <tr>
+                    <th>TableHead</th>
+                    <th>TableHead</th>
+                    <th>Head</th>
+                    <th>TableHead</th>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+
+            </table>
+            <table id="tab-fixed">
+                <tr>
+                    <th>TableHead</th>
+                    <th>TableHead</th>
+                    <th>Head</th>
+                    <th>TableHead</th>
+                </tr>
+                <tr>
+                    <td>Content Text</td>
+                    <td>Content Text Text</td>
+                    <td>1234567</td>
+                    <td>
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                        <input type="button" value="BTN">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

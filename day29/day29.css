@@ -188,8 +188,9 @@ select {
     width: 180px;
     background-color: #eee;
 }
-#tab-navi li{
+#tab-navi li {
     line-height: 30px;
+    cursor: pointer;
 }
 #tab-con,
 #tab-fixed {

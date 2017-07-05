@@ -8,9 +8,7 @@ window.onload = function () {
     var tabCon = document.getElementById('tab-con');
     var tabNavi = document.getElementById('tab-navi');
     var normalTr = tabCon.getElementsByTagName('tr');
-    var availHeight = screen.availHeight;
     var rectNavi = tabNavi.getBoundingClientRect();//动态获取ul元素到视窗的距离，这是一个集合，有上下左右等的距离
-    var rectCon = tabCon.getBoundingClientRect();
     var fixedTab = document.getElementById('tab-fixed');
 
 
@@ -32,7 +30,7 @@ window.onload = function () {
      * 当滚动条离初始位置的距离 < 表格顶部离页面最顶部的距离时，表格标题正常显示，否则，将固定
      */
     function winScroll(){
-        if (getScrollXY().y < rectCon.top) {
+        if (getScrollXY().y <= rectNavi.top) {
             tab.style.position = '';
             fixedTab.style.display = 'none';
             tabCon.style.position = '';
@@ -41,7 +39,7 @@ window.onload = function () {
             tabNavi.style.top = '';
             tabNavi.style.height = innerHeight - rectNavi.top + getScrollXY().y + 'px';//availHeight - rectNavi就是tabnavi应该显示的高度
             tabNavi.style.overflow = 'scroll';
-        } else if (getScrollXY().y >= rectCon.top) {
+        } else {
             tabNavi.style.height = innerHeight + 'px';
             fixedTab.style.display = 'block';
             tabNavi.style.position = 'fixed';
