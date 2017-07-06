@@ -214,13 +214,13 @@ select {
     padding-right: 25px;
     text-align: center;
 }
+#tab-con tr:nth-child(2n+3) {
+    background-color: #efefef;
+}
 #tab-fixed {
     position: fixed;
     top: 0;
     display: none;
     height: 50px;
     overflow: hidden;
-}
-.grey {
-    background-color: #efefef;
 }

@@ -7,21 +7,22 @@ window.onload = function () {
     var tab = document.getElementById('tab');
     var tabCon = document.getElementById('tab-con');
     var tabNavi = document.getElementById('tab-navi');
-    var normalTr = tabCon.getElementsByTagName('tr');
+    // var normalTr = tabCon.getElementsByTagName('tr');
     var rectNavi = tabNavi.getBoundingClientRect();//动态获取导航列表到视窗的距离，这是一个集合，有上下左右等的距离
     var fixedTab = document.getElementById('tab-fixed');
     var naviLi = tabNavi.getElementsByClassName('level-1');
 
 
     //给表格添加背景色
-    for (var i = 2; i < normalTr.length; i += 2) {
-        normalTr[i].className = 'grey';
-    }
+    // for (var i = 2; i < normalTr.length; i += 2) {
+    //     normalTr[i].className = 'grey';
+    // }
 
 
     addEvent(window, 'mousewheel', winScroll);
     addEvent(window, 'DOMMouseScroll', winScroll);
     addSubtitle();
+    addTableData();
 
 
     /**
@@ -84,13 +85,13 @@ window.onload = function () {
         return {x: x, y: y};
     }
 
-    // console.log(data.length);//data即有几个一级标题需要添加二级标题
-    // console.log(data[0]["subtitle"]["length"]);//第一个元素的一级标题下二级标题下元素的个数
-    // console.log(data[0].title);//获得第一个元素的一级标题
-    // console.log(data);
-    // console.log(data[0].subtitle);//获得第一个元素的二级标题
-    // console.log(data[0].subtitle[0]);//获得第一个元素的二级标题的第一个元素
-    // console.log(data[0]["index"]);//获得第一个元素的index
+    // console.log(naviData.length);//naviData即有几个一级标题需要添加二级标题
+    // console.log(naviData[0]["subtitle"]["length"]);//第一个元素的一级标题下二级标题下元素的个数
+    // console.log(naviData[0].title);//获得第一个元素的一级标题
+    // console.log(naviData);
+    // console.log(naviData[0].subtitle);//获得第一个元素的二级标题
+    // console.log(naviData[0].subtitle[0]);//获得第一个元素的二级标题的第一个元素
+    // console.log(naviData[0]["index"]);//获得第一个元素的index
     // var del = naviLi.getElementsByTagName('li');
 
     // var m = 'ul-3';
@@ -98,17 +99,16 @@ window.onload = function () {
     // console.log(ms[1]);
 
 
-
-
     /**
      * 一级导航的添加事件
      * 这个函数与clickLevel1函数是一起的，用于解决读取不到i的问题
      */
     function addSubtitle() {
-        for (var i = 0; i < data.length; i++) {
+        for (var i = 0; i < naviData.length; i++) {
             clickLevel1(i);
         }
     }
+
 
     /**
      * 一级导航的点击事件
@@ -119,12 +119,12 @@ window.onload = function () {
         naviLi[i].addEventListener("click", function () {
             count++; //用于记录点击次数，以便判断是否收起二级导航
             if (count % 2 == 1){
-                var index = data[i].index; //index值跟i值相同
+                var index = naviData[i].index; //index值跟i值相同
                 var ul = document.createElement('ul'); //创建ul标签
-                var len = data[index].subtitle.length; //获取每个一级标题下二级导航元素的个数
+                var len = naviData[index].subtitle.length; //获取每个一级标题下二级导航元素的个数
                 var str = ''; //初始化str，用于存放二级导航
                 for (var j = 0; j < len; j++) {
-                    str += '<li>' + data[index].subtitle[j] + '</li>'; //将二级导航以li标签的形式放入str中
+                    str += '<li>' + naviData[index].subtitle[j] + '</li>'; //将二级导航以li标签的形式放入str中
                 }
                 ul.innerHTML = str; //将str写入ul
                 ul.id = 'ul-' + i; //给ul加id
@@ -137,4 +137,53 @@ window.onload = function () {
             }
         })
     }
+
+    // console.log(Object.keys(tableData[0]).length);//返回每个对象中key-value对的个数
+    // var str = '';  for-in
+    // for (var i in tableData[0]) {
+    //     str += tableData[0][i];
+    // }
+    // console.log(str);
+    function addTableData() {
+        addThead(tabCon);
+        addThead(fixedTab);
+        for (var i = 0;i < tableData.length;i++) {
+            var row = document.createElement('tr'); //创建行
+            var str = '';
+            for (var j in tableData[i]) {
+                if (j != "index") {
+                    str += '<td>' + tableData[i][j] + '</td>';
+                }
+            }
+            str += '<td><input type="button" value="编辑"id="edit"><input type="button" value="删除" id="del"></td>';
+            row.innerHTML = str;
+            tabCon.appendChild(row);
+        }
+        for (var i =0;i < tableData.length;i++) {
+            var row = document.createElement('tr');
+            var str = '';
+            for (var j in tableData[i]) {
+                if (j != "index") {
+                    str += '<td>' + tableData[i][j] + '</td>';
+                }
+            }
+            str += '<td><input type="button" value="编辑"><input type="button" value="删除"></td>';
+            row.innerHTML = str;
+            fixedTab.appendChild(row);
+        }
+    }
+
+    function addThead(elem) {
+        var row = document.createElement('tr'); //创建行
+        var str = '';
+        for (var j in tableData[0]) {
+            str += '<th>' + j + '</th>';
+        }
+        str += '<th>More</th>';
+        row.innerHTML = str;
+        elem.appendChild(row);
+    }
+
+
+
 }

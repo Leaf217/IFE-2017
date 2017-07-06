@@ -1,7 +1,7 @@
 /**
  * Created by zhu_yeqing on 2017/7/4.
  */
-var data = [
+var naviData = [
     {
         "title": "Level 1 row1",
         "subtitle": [
