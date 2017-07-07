@@ -11,18 +11,15 @@ window.onload = function () {
     var rectNavi = tabNavi.getBoundingClientRect();//动态获取导航列表到视窗的距离，这是一个集合，有上下左右等的距离
     var fixedTab = document.getElementById('tab-fixed');
     var naviLi = tabNavi.getElementsByClassName('level-1');
-
-
-    //给表格添加背景色
-    // for (var i = 2; i < normalTr.length; i += 2) {
-    //     normalTr[i].className = 'grey';
-    // }
+    var cover =document.getElementById('cover');
 
 
     addEvent(window, 'mousewheel', winScroll);
     addEvent(window, 'DOMMouseScroll', winScroll);
     addSubtitle();
     addTableData();
+
+
 
 
     /**
@@ -99,6 +96,7 @@ window.onload = function () {
     // console.log(ms[1]);
 
 
+
     /**
      * 一级导航的添加事件
      * 这个函数与clickLevel1函数是一起的，用于解决读取不到i的问题
@@ -116,7 +114,7 @@ window.onload = function () {
      */
     function clickLevel1(i) {
         var count = 0;
-        naviLi[i].addEventListener("click", function () {
+        eventUntil.addHandler(naviLi[i], "click", function () {
             count++; //用于记录点击次数，以便判断是否收起二级导航
             if (count % 2 == 1){
                 var index = naviData[i].index; //index值跟i值相同
@@ -135,8 +133,10 @@ window.onload = function () {
                 var thisNode = document.getElementById('ul-' + i);
                 thisNode.parentNode.removeChild(thisNode); //删除ul节点，即二级导航收起
             }
-        })
+        });
     }
+
+
 
     // console.log(Object.keys(tableData[0]).length);//返回每个对象中key-value对的个数
     // var str = '';  for-in
@@ -144,9 +144,41 @@ window.onload = function () {
     //     str += tableData[0][i];
     // }
     // console.log(str);
+
+    /**
+     * 添加表头和表格中的内容
+     * 两个表格，一个用于显示，一个用于表头吸附
+     */
     function addTableData() {
         addThead(tabCon);
         addThead(fixedTab);
+        createTab(tabCon);
+        createTab(fixedTab);
+    }
+
+    /**
+     * 添加表头
+     * @param elem 表格
+     */
+    function addThead(elem) {
+        var row = document.createElement('tr'); //创建行
+        var str = '';
+        for (var j in tableData[0]) {
+            if (j != "index") {
+                str += '<th>' + j + '</th>';
+            }
+        }
+        str += '<th>More</th>';
+        row.innerHTML = str;
+        elem.appendChild(row);
+    }
+
+
+    /**
+     * 添加表格内容
+     * @param elem 表格
+     */
+    function createTab(elem) {
         for (var i = 0;i < tableData.length;i++) {
             var row = document.createElement('tr'); //创建行
             var str = '';
@@ -155,35 +187,193 @@ window.onload = function () {
                     str += '<td>' + tableData[i][j] + '</td>';
                 }
             }
-            str += '<td><input type="button" value="编辑"id="edit"><input type="button" value="删除" id="del"></td>';
+            str += '<td><input type="button" value="编辑">'
+                +      '<input type="button" value="删除"></td>';
             row.innerHTML = str;
-            tabCon.appendChild(row);
+            row.id = 'tr-' + i;
+            elem.appendChild(row);
         }
-        for (var i =0;i < tableData.length;i++) {
-            var row = document.createElement('tr');
+    }
+
+
+    eventUntil.addHandler(tabCon, "click", clickButtons);
+
+
+    /**
+     * 点击按钮事件：编辑按钮和删除按钮
+     * @param e
+     */
+    function clickButtons(e) {
+        var e = eventUntil.getEvent(e);
+        if (eventUntil.getElement(e).value == "编辑") {
             var str = '';
-            for (var j in tableData[i]) {
-                if (j != "index") {
-                    str += '<td>' + tableData[i][j] + '</td>';
+            str += '<p><label>Name<input type="text" id="in-name"></label></p>'
+                +  '<p><label>Content<input type="text" id="in-content"></label></p>'
+                +  '<p><label>Value<input type="text" id="in-value"></label></p>'
+                +  '<p><input type="button" value="确定"><input type="button" value="取消"></p>';
+
+            popup(str, 75, 120, 'submission', 'editDiv');
+
+            var editDiv = document.getElementById('editDiv');
+            var rowId = eventUntil.getElement(e).parentNode.parentNode.id;
+            var rowIndex = rowId.split('-')[1]; //点击的删除键对应数据的index值
+
+            eventUntil.addHandler(editDiv, 'click', editConfirm);
+
+            function editConfirm(e) {
+                var e = eventUntil.getEvent(e);
+                if (eventUntil.getElement(e).value == "确定") {
+                    var inName = document.getElementById('in-name').value;
+                    var inContent = document.getElementById('in-content').value;
+                    var inValue = document.getElementById('in-value').value;
+
+                    tableData[rowIndex].Name = inName;
+                    tableData[rowIndex].Content = inContent;
+                    tableData[rowIndex].Value = inValue;
+
+                    tabCon.innerHTML = '';
+                    fixedTab.innerHTML = ''; //将表格清空
+                    addTableData(); //重新添加表格数据
+
+                    cover.style.display = 'none';
+                    editDiv.parentNode.removeChild(editDiv); //删除弹出的确认框
+
+                } else if (eventUntil.getElement(e).value == "取消") {
+                    cancel(editDiv);
                 }
+                mouseWheel(); // 删除绑定的禁止滚轮事件
             }
-            str += '<td><input type="button" value="编辑"><input type="button" value="删除"></td>';
-            row.innerHTML = str;
-            fixedTab.appendChild(row);
+
+            // // document.body.style.overflow = 'hidden';
+            // cover.style.height = innerHeight + 'px';
+            // cover.style.width = innerWidth + 'px';
+            // cover.style.display = 'block';
+            // disabledMouseWheel();
+            // var addDiv = document.createElement('div');
+            // var str = '';
+            // str += '<p><label>Name<input type="text"></label></p>' +
+            //     '<p><label>Content<input type="text"></label></p>' +
+            //     '<p><label>Value<input type="text"></label></p>' +
+            //     '<p><input type="button" value="确定"><input type="button" value="取消"></p>'
+            // addDiv.innerHTML = str;
+            // addDiv.className = 'submission';
+            // addDiv.style.top = innerHeight/2 - 75 + 'px';
+            // addDiv.style.left = (document.body.clientWidth || document.documentElement.clientWidth)/2 -120 + 'px';//由于clientWidth不包含滚动条，所以用了这个
+            // document.body.appendChild(addDiv);
+            // eventUntil.stopPropagation(e);
+        }
+
+        if (eventUntil.getElement(e).value == "删除") {
+            var str = '';
+            var rowId = eventUntil.getElement(e).parentNode.parentNode.id;
+            var rowIndex = rowId.split('-')[1]; //点击的删除键对应数据的index值
+            str += '<p>确定要删除'+ tableData[rowIndex].Id +'?</p>' +
+                '<p><input type="button" value="确定"><input type="button" value="取消"></p>';
+
+            popup(str, 40, 120, 'delete', 'delDiv');
+
+            // console.log(eventUntil.getElement(e).parentNode.parentNode.id); //获取点击的删除键对应行的id
+
+            var delDiv = document.getElementById('delDiv');
+            eventUntil.addHandler(delDiv, 'click', delConfirm);
+
+            function delConfirm(e) {
+                var e = eventUntil.getEvent(e);
+                if (eventUntil.getElement(e).value == "确定") {
+                    tabCon.innerHTML = '';//将表格清空
+                    fixedTab.innerHTML = '';
+                    tableData.splice(rowIndex, 1);
+                    addTableData(); //重新添加表格数据
+
+                    cover.style.display = 'none';
+                    delDiv.parentNode.removeChild(delDiv); //删除弹出的确认框
+
+                } else if (eventUntil.getElement(e).value == "取消") {
+                    cancel(delDiv);
+                }
+                mouseWheel();
+            }
+
+            // // document.body.style.overflow = 'hidden';
+            // cover.style.height = innerHeight + 'px';
+            // cover.style.width = innerWidth + 'px';
+            // cover.style.display = 'block';
+            // disabledMouseWheel();
+            // var addDiv = document.createElement('div');
+            // var str = '';
+            // str += '<p>确定要删除****</p>' +
+            //     '<p><input type="button" value="确定"><input type="button" value="取消"></p>';
+            // addDiv.innerHTML = str;
+            // addDiv.className = 'delete';
+            // addDiv.style.top = innerHeight/2 - 40 + 'px';
+            // addDiv.style.left = (document.body.clientWidth || document.documentElement.clientWidth)/2 -120 + 'px';//由于clientWidth不包含滚动条，所以用了这个
+            // document.body.appendChild(addDiv);
+            // eventUntil.stopPropagation(e);
         }
     }
 
-    function addThead(elem) {
-        var row = document.createElement('tr'); //创建行
-        var str = '';
-        for (var j in tableData[0]) {
-            str += '<th>' + j + '</th>';
-        }
-        str += '<th>More</th>';
-        row.innerHTML = str;
-        elem.appendChild(row);
+    /**
+     * 确认框的弹出
+     * @param str 确认框的内容
+     * @param top 定位的top值
+     * @param left 定位的left值
+     * @param className 类名
+     * @param id id名
+     */
+    function popup(str, top, left, className,id) {
+        // document.body.style.overflow = 'hidden';
+        cover.style.height = innerHeight + 'px';
+        cover.style.width = innerWidth + 'px';
+        cover.style.display = 'block';
+
+        disabledMouseWheel();
+
+        var addDiv = document.createElement('div');
+        addDiv.innerHTML = str;
+        addDiv.className = className;
+        addDiv.id = id;
+        addDiv.style.top = innerHeight/2 - top + 'px';
+        addDiv.style.left = (document.body.clientWidth || document.documentElement.clientWidth)/2 -left + 'px';//由于clientWidth不包含滚动条，所以用了这个
+
+        document.body.appendChild(addDiv);
+
     }
 
+    /**
+     * 确认框点击取消后的动作
+     * @param elem 编辑确认框 or 删除确认框
+     */
+    function cancel(elem) {
+        cover.style.display = 'none';
+        elem.parentNode.removeChild(elem);
+    }
+
+    /**
+     * 禁止滚轮滑动
+     */
+    function disabledMouseWheel() {
+        if (document.addEventListener) {
+            document.addEventListener('DOMMouseScroll', preventDefault, false);
+        }//W3C
+        window.onmousewheel = document.onmousewheel = preventDefault;//IE/Opera/Chrome
+    }
+
+
+    /**
+     * 取消禁止滚轮滑动
+     */
+    function mouseWheel() {
+        if (document.removeEventListener) {
+            document.removeEventListener('DOMMouseScroll', preventDefault, false);
+        }//W3C
+        window.onmousewheel = document.onmousewheel = null;//IE/Opera/Chrome
+    }
+
+
+    function preventDefault(e) {
+        var e = eventUntil.getEvent(e);
+        eventUntil.preventDefault(e);
+    }
 
 
 }

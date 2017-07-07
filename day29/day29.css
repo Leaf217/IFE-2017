@@ -224,3 +224,54 @@ select {
     height: 50px;
     overflow: hidden;
 }
+.cover {
+    position:fixed;
+    top: 0;
+    left: 0;
+    filter: alpha(opacity=60);
+    background-color: #777;
+    z-index: 1;
+    display:none;
+    opacity:0.5;
+    -moz-opacity:0.5;
+}
+.submission {
+    position: fixed;
+    width: 240px;
+    height: 150px;
+    padding: 20px;
+    border: 1px solid #9b9b9b;
+    z-index: 2;
+    background-color: #fff;
+}
+.delete {
+    position: fixed;
+    width: 240px;
+    height: 80px;
+    padding: 30px;
+    border: 1px solid #9b9b9b;
+    z-index: 2;
+    background-color: #fff;
+}
+.submission p,
+.delete p {
+    height: 40px
+}
+.submission p:nth-child(4),
+.delete p:nth-child(2) {
+    display: flex;
+    justify-content: space-around;
+}
+.submission p:nth-child(4) input,
+.delete input {
+    width: 70px;
+    height: 30px;
+    border: 1px solid #9b9b9b;
+    background-color: #fff;
+}
+.submission label {
+    display: flex;
+    justify-content: space-between;
+}
+
+
