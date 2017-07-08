@@ -25,6 +25,20 @@ var eventUntil = {
             elem['on' + type] = null;
         }
     },
+    //添加滑轮事件
+    addScroll: function (handler) {
+        if (document.addEventListener) {
+            document.addEventListener('DOMMouseScroll', handler, false);
+        }//W3C
+        window.onmousewheel = document.onmousewheel = handler;//IE/Opera/Chrome
+    },
+    //删除滑轮事件
+    removeScroll: function (handler) {
+        if (document.removeEventListener) {
+            document.removeEventListener('DOMMouseScroll', handler, false);
+        }//W3C
+        window.onmousewheel = document.onmousewheel = null;//IE/Opera/Chrome
+    },
     //获取事件
     getEvent: function (e) {
         return e ? e: window.event;

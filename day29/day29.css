@@ -229,11 +229,11 @@ select {
     top: 0;
     left: 0;
     filter: alpha(opacity=60);
+    opacity: .6;
+    -moz-opacity: .6;
     background-color: #777;
     z-index: 1;
     display:none;
-    opacity:0.5;
-    -moz-opacity:0.5;
 }
 .submission {
     position: fixed;
