@@ -10,7 +10,7 @@ window.onload = function () {
     var rectNavi = tabNavi.getBoundingClientRect();//动态获取导航列表到视窗的距离，这是一个集合，有上下左右等的距离
     var fixedTab = document.getElementById('tab-fixed');
     var cover =document.getElementById('cover'); //用作遮罩的div
-    var factor = true; //判断点击一级标题是否折叠的因子
+    // var factor = true; //判断点击一级标题是否折叠的因子
 
 
     eventUntil.addHandler(window, 'mousewheel', winScroll);
@@ -79,7 +79,15 @@ window.onload = function () {
         var e = eventUntil.getEvent(e);
         var title = eventUntil.getElement(e); //获得被点击的元素
         var titleId = title.id;
+
         var titleIndex = titleId.split('-')[1]; //点击的一级导航对应数据的index值
+        var factor;
+        //判断点击一级标题是否折叠的因子
+        if (title.childNodes.length == 1) {
+            factor = true;
+        } else {
+            factor = false;
+        }
         if (naviData[titleIndex]) { //判断一下是否有二级导航的数据
             if (naviData[titleIndex].subtitle && factor) { //判断是否二级导航数据里有没有subtitle键值
                 var ul = document.createElement('ul'); //创建ul标签
@@ -93,11 +101,9 @@ window.onload = function () {
                 ul.style.paddingLeft = '40px'; //设置ul的padding-left值
                 ul.style.backgroundColor = '#fff'; //设置ul的背景颜色
                 title.appendChild(ul); //将设置好的ul写入一级导航下
-                factor = !factor;
-            } else if (naviData[titleIndex].subtitle && !factor) {
+            } else if (naviData[titleIndex].subtitle &&  !factor) {
                 var thisNode = document.getElementById('ul-' + titleIndex);
                 thisNode.parentNode.removeChild(thisNode); //删除ul节点，即二级导航收起
-                factor = true;
             }
         }
 
