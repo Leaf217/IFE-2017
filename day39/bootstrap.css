@@ -1,0 +1,20 @@
+#banner {
+    width: 100%;
+}
+.pic-1 {
+    position: relative;
+}
+.mask {
+    position: absolute;
+    top: 60%;
+    width: 98%;
+    height: 38%;
+    background-color: #000;
+    opacity: .3;
+    z-index: 666;
+}
+.title {
+    position: absolute;
+    top: 60%;
+    z-index: 999;
+}

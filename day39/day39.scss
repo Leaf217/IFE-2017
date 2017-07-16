@@ -1,0 +1,272 @@
+
+//定义px转rem的函数
+$browser-default-font-size: 16px !default;
+html {
+  font-size: $browser-default-font-size;
+}
+@function pxToRem($px) {
+  @return $px / $browser-default-font-size * 1rem;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width:1280px) and (min-width: 800px){
+  .content-mobile {
+    display: none;
+  }
+  .nav {
+    @include flex;
+    align-items: center;
+    padding-left: pxToRem(10px);
+    padding-right: pxToRem(10px);
+    height: pxToRem(50px);
+    color: #fff;
+    background-color: #000;
+    ul {
+      @include flex;
+      li {
+        margin-left: pxToRem(10px);
+      }
+    }
+  }
+  .banner {
+    img {
+      width: 100%;
+    }
+  }
+  .content {
+    @include flex;
+    width: 100%;
+    .left{
+      @include flex;
+      flex-direction: column;
+      .left-row {
+        @include flex;
+        .thumbnail {
+          position: relative;
+          img {
+            margin-right: pxToRem(15px);
+            margin-bottom: pxToRem(10px);
+            width: pxToRem(160px);
+            height: pxToRem(130px);
+          }
+          .des {
+            position: absolute;
+            left: 0;
+            top: pxToRem(65px);
+            width: pxToRem(160px);
+            height: pxToRem(65px);
+            color: #fff;
+            background-color: rgba(0,0,0,0.5);
+            p:nth-child(1) {
+              margin-top: pxToRem(10px);
+            }
+            p {
+              margin-left: pxToRem(10px);
+            }
+            .title {
+              font-size: pxToRem(22px);
+              font-weight: 700;
+            }
+            .text {
+              font-size: pxToRem(14px);
+            }
+          }
+        }
+      }
+      .left-col {
+        @include flex;
+        flex-direction: column;
+        .row {
+          @include flex;
+          margin-top: pxToRem(15px);
+          margin-right: pxToRem(15px);
+          img {
+            width: pxToRem(200px);
+            height: pxToRem(135px);
+          }
+          .title {
+            font-size: pxToRem(22px);
+            font-weight: 700;
+          }
+          .text {
+            font-size: pxToRem(14px);
+          }
+        }
+      }
+    }
+    .right {
+      .thumbnail {
+        position: relative;
+        img {
+          width: pxToRem(250px);
+          height: pxToRem(100px);
+        }
+        .des {
+          position: absolute;
+          left: pxToRem(20px);
+          top: pxToRem(20px);
+          color: #fff;
+          .title {
+            font-size: pxToRem(22px);
+            font-weight: 700;
+          }
+          .text {
+            font-size: pxToRem(14px);
+          }
+        }
+      }
+      .little-title {
+        font-size: pxToRem(18px);
+        font-weight: 700;
+      }
+      .time {
+        margin-bottom: pxToRem(10px);
+        font-size: pxToRem(10px);
+        color: #aca9a9;
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: pxToRem(15px);
+    width: 100%;
+    height: pxToRem(115px);
+    background-color: #666;
+  }
+  .mobile-footer {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 475px) {
+  .content {
+    display: none;
+    //@extend .content-mobile;
+  }
+  .content-mobile {
+    display: block;
+    .thumbnail-1 {
+      @include flex;
+      margin-bottom: pxToRem(10px);
+      .thumbnail {
+        position: relative;
+        width: 33%;
+        img {
+          width: 100%;
+          height: pxToRem(130px);
+        }
+        .des {
+          position: absolute;
+          left: 0;
+          top: pxToRem(65px);
+          width: 100%;
+          height: pxToRem(65px);
+          color: #fff;
+          background-color: rgba(0, 0, 0, 0.5);
+          .title {
+            font-size: pxToRem(18px);
+            font-weight: 700;
+          }
+          .text {
+            font-size: pxToRem(12px);
+          }
+          p:nth-child(1) {
+            margin-top: pxToRem(10px);
+          }
+          p {
+            margin-left: pxToRem(10px);
+          }
+        }
+      }
+      .center-thu {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+    }
+    .thumbnail-2 {
+      position: relative;
+      width: 100%;
+      .des {
+        position: absolute;
+        left: pxToRem(40px);
+        top: pxToRem(40px);
+        color: #fff;
+        .title {
+          font-size: pxToRem(22px);
+          font-weight: 700;
+        }
+        .text {
+          font-size: pxToRem(14px);
+        }
+
+      }
+    }
+    .detail {
+      display: flex;
+      flex-direction: column;
+      margin: pxToRem(20px);
+      .row {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: pxToRem(20px);
+        img {
+          width: pxToRem(200px);
+          height: pxToRem(135px);
+        }
+        .title {
+          font-size: pxToRem(22px);
+          font-weight: 700;
+        }
+        .text {
+          font-size: pxToRem(14px);
+        }
+      }
+      .list {
+        margin-top: pxToRem(20px);
+        .little-title {
+          font-size: pxToRem(26px);
+          font-weight: 700;
+        }
+        .time {
+          margin-bottom: pxToRem(10px);
+          font-size: pxToRem(10px);
+          color: #aca9a9;
+        }
+      }
+    }
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #000;
+    ul {
+      display: none;
+    }
+  }
+  .footer {
+    display: none;
+  }
+  .mobile-footer {
+    display: block;
+    padding-left: pxToRem(10px);
+    padding-right: pxToRem(10px);
+    padding-top: pxToRem(20px);
+    height: pxToRem(40px);
+    font-size: pxToRem(18px);
+    background-color: #eee;
+    ul {
+      width: 100%;
+      @include flex;
+    }
+  }
+}

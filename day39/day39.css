@@ -1,0 +1,212 @@
+html {
+  font-size: 16px; }
+
+@media screen and (max-width: 1280px) and (min-width: 800px) {
+  .content-mobile {
+    display: none; }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    height: 3.125rem;
+    color: #fff;
+    background-color: #000; }
+    .nav ul {
+      display: flex;
+      justify-content: space-between; }
+      .nav ul li {
+        margin-left: 0.625rem; }
+
+  .banner img {
+    width: 100%; }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+    .content .left {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column; }
+      .content .left .left-row {
+        display: flex;
+        justify-content: space-between; }
+        .content .left .left-row .thumbnail {
+          position: relative; }
+          .content .left .left-row .thumbnail img {
+            margin-right: 0.9375rem;
+            margin-bottom: 0.625rem;
+            width: 10rem;
+            height: 8.125rem; }
+          .content .left .left-row .thumbnail .des {
+            position: absolute;
+            left: 0;
+            top: 4.0625rem;
+            width: 10rem;
+            height: 4.0625rem;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5); }
+            .content .left .left-row .thumbnail .des p:nth-child(1) {
+              margin-top: 0.625rem; }
+            .content .left .left-row .thumbnail .des p {
+              margin-left: 0.625rem; }
+            .content .left .left-row .thumbnail .des .title {
+              font-size: 1.375rem;
+              font-weight: 700; }
+            .content .left .left-row .thumbnail .des .text {
+              font-size: 0.875rem; }
+      .content .left .left-col {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column; }
+        .content .left .left-col .row {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 0.9375rem;
+          margin-right: 0.9375rem; }
+          .content .left .left-col .row img {
+            width: 12.5rem;
+            height: 8.4375rem; }
+          .content .left .left-col .row .title {
+            font-size: 1.375rem;
+            font-weight: 700; }
+          .content .left .left-col .row .text {
+            font-size: 0.875rem; }
+    .content .right .thumbnail {
+      position: relative; }
+      .content .right .thumbnail img {
+        width: 15.625rem;
+        height: 6.25rem; }
+      .content .right .thumbnail .des {
+        position: absolute;
+        left: 1.25rem;
+        top: 1.25rem;
+        color: #fff; }
+        .content .right .thumbnail .des .title {
+          font-size: 1.375rem;
+          font-weight: 700; }
+        .content .right .thumbnail .des .text {
+          font-size: 0.875rem; }
+    .content .right .little-title {
+      font-size: 1.125rem;
+      font-weight: 700; }
+    .content .right .time {
+      margin-bottom: 0.625rem;
+      font-size: 0.625rem;
+      color: #aca9a9; }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.9375rem;
+    width: 100%;
+    height: 7.1875rem;
+    background-color: #666; }
+
+  .mobile-footer {
+    display: none; } }
+@media screen and (min-width: 320px) and (max-width: 475px) {
+  .content {
+    display: none; }
+
+  .content-mobile {
+    display: block; }
+    .content-mobile .thumbnail-1 {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.625rem; }
+      .content-mobile .thumbnail-1 .thumbnail {
+        position: relative;
+        width: 33%; }
+        .content-mobile .thumbnail-1 .thumbnail img {
+          width: 100%;
+          height: 8.125rem; }
+        .content-mobile .thumbnail-1 .thumbnail .des {
+          position: absolute;
+          left: 0;
+          top: 4.0625rem;
+          width: 100%;
+          height: 4.0625rem;
+          color: #fff;
+          background-color: rgba(0, 0, 0, 0.5); }
+          .content-mobile .thumbnail-1 .thumbnail .des .title {
+            font-size: 1.125rem;
+            font-weight: 700; }
+          .content-mobile .thumbnail-1 .thumbnail .des .text {
+            font-size: 0.75rem; }
+          .content-mobile .thumbnail-1 .thumbnail .des p:nth-child(1) {
+            margin-top: 0.625rem; }
+          .content-mobile .thumbnail-1 .thumbnail .des p {
+            margin-left: 0.625rem; }
+      .content-mobile .thumbnail-1 .center-thu {
+        margin-left: 5%;
+        margin-right: 5%; }
+    .content-mobile .thumbnail-2 {
+      position: relative;
+      width: 100%; }
+      .content-mobile .thumbnail-2 .des {
+        position: absolute;
+        left: 2.5rem;
+        top: 2.5rem;
+        color: #fff; }
+        .content-mobile .thumbnail-2 .des .title {
+          font-size: 1.375rem;
+          font-weight: 700; }
+        .content-mobile .thumbnail-2 .des .text {
+          font-size: 0.875rem; }
+    .content-mobile .detail {
+      display: flex;
+      flex-direction: column;
+      margin: 1.25rem; }
+      .content-mobile .detail .row {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 1.25rem; }
+        .content-mobile .detail .row img {
+          width: 12.5rem;
+          height: 8.4375rem; }
+        .content-mobile .detail .row .title {
+          font-size: 1.375rem;
+          font-weight: 700; }
+        .content-mobile .detail .row .text {
+          font-size: 0.875rem; }
+      .content-mobile .detail .list {
+        margin-top: 1.25rem; }
+        .content-mobile .detail .list .little-title {
+          font-size: 1.625rem;
+          font-weight: 700; }
+        .content-mobile .detail .list .time {
+          margin-bottom: 0.625rem;
+          font-size: 0.625rem;
+          color: #aca9a9; }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #000; }
+    .nav ul {
+      display: none; }
+
+  .footer {
+    display: none; }
+
+  .mobile-footer {
+    display: block;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    padding-top: 1.25rem;
+    height: 2.5rem;
+    font-size: 1.125rem;
+    background-color: #eee; }
+    .mobile-footer ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between; } }
+
+/*# sourceMappingURL=day39.css.map */
