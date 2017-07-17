@@ -1,7 +1,7 @@
 html {
   font-size: 16px; }
 
-@media screen and (max-width: 1280px) and (min-width: 800px) {
+@media screen and (min-width: 800px) and (max-width: 1280px) {
   .content-mobile {
     display: none; }
 
@@ -9,6 +9,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: default;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
     height: 3.125rem;
@@ -16,7 +17,9 @@ html {
     background-color: #000; }
     .nav ul {
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      align-items: default;
+      flex-direction: default; }
       .nav ul li {
         margin-left: 0.625rem; }
 
@@ -26,14 +29,19 @@ html {
   .content {
     display: flex;
     justify-content: space-between;
+    align-items: default;
+    flex-direction: default;
     width: 100%; }
     .content .left {
       display: flex;
       justify-content: space-between;
+      align-items: default;
       flex-direction: column; }
       .content .left .left-row {
         display: flex;
-        justify-content: space-between; }
+        justify-content: space-between;
+        align-items: default;
+        flex-direction: default; }
         .content .left .left-row .thumbnail {
           position: relative; }
           .content .left .left-row .thumbnail img {
@@ -61,10 +69,13 @@ html {
       .content .left .left-col {
         display: flex;
         justify-content: space-between;
+        align-items: default;
         flex-direction: column; }
         .content .left .left-col .row {
           display: flex;
           justify-content: space-between;
+          align-items: default;
+          flex-direction: default;
           margin-top: 0.9375rem;
           margin-right: 0.9375rem; }
           .content .left .left-col .row img {
@@ -84,7 +95,10 @@ html {
         position: absolute;
         left: 1.25rem;
         top: 1.25rem;
-        color: #fff; }
+        width: default;
+        height: default;
+        color: #fff;
+        background-color: default; }
         .content .right .thumbnail .des .title {
           font-size: 1.375rem;
           font-weight: 700; }
@@ -102,6 +116,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: default;
     margin-top: 0.9375rem;
     width: 100%;
     height: 7.1875rem;
@@ -118,6 +133,8 @@ html {
     .content-mobile .thumbnail-1 {
       display: flex;
       justify-content: space-between;
+      align-items: default;
+      flex-direction: default;
       margin-bottom: 0.625rem; }
       .content-mobile .thumbnail-1 .thumbnail {
         position: relative;
@@ -134,10 +151,10 @@ html {
           color: #fff;
           background-color: rgba(0, 0, 0, 0.5); }
           .content-mobile .thumbnail-1 .thumbnail .des .title {
-            font-size: 1.125rem;
+            font-size: 0.875rem;
             font-weight: 700; }
           .content-mobile .thumbnail-1 .thumbnail .des .text {
-            font-size: 0.75rem; }
+            font-size: 0.625rem; }
           .content-mobile .thumbnail-1 .thumbnail .des p:nth-child(1) {
             margin-top: 0.625rem; }
           .content-mobile .thumbnail-1 .thumbnail .des p {
@@ -152,7 +169,10 @@ html {
         position: absolute;
         left: 2.5rem;
         top: 2.5rem;
-        color: #fff; }
+        width: default;
+        height: default;
+        color: #fff;
+        background-color: default; }
         .content-mobile .thumbnail-2 .des .title {
           font-size: 1.375rem;
           font-weight: 700; }
@@ -160,10 +180,14 @@ html {
           font-size: 0.875rem; }
     .content-mobile .detail {
       display: flex;
+      justify-content: default;
+      align-items: default;
       flex-direction: column;
       margin: 1.25rem; }
       .content-mobile .detail .row {
         display: flex;
+        justify-content: default;
+        align-items: default;
         flex-direction: row-reverse;
         margin-top: 1.25rem; }
         .content-mobile .detail .row img {
@@ -188,6 +212,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: default;
     color: #fff;
     background-color: #000; }
     .nav ul {
@@ -207,6 +232,8 @@ html {
     .mobile-footer ul {
       width: 100%;
       display: flex;
-      justify-content: space-between; } }
+      justify-content: space-between;
+      align-items: default;
+      flex-direction: default; } }
 
 /*# sourceMappingURL=day39.css.map */

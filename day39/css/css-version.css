@@ -1,0 +1,94 @@
+.logo {
+    float: left;
+    width: 100%;
+    padding: 1% 1%;
+    color: #fff;
+    background-color: #000;
+}
+.menu {
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    color: #fff;
+}
+.menu li {
+    float: left;
+    padding-left: 1em;
+}
+.banner {
+    margin-bottom: 1em;
+    width: 100%;
+}
+.banner img {
+    width: 100%;
+    height: auto;
+}
+.thu-1 div {
+    margin-right: 2%;
+    float: left;
+    width: 20%;
+}
+.thu-1 div img {
+    width: 100%;
+    height: auto;
+}
+.right-thu {
+    float: right;
+    width: 30%;
+}
+.right-thu img {
+    width: 100%;
+    height: auto;
+}
+.horizon {
+    margin: 1em 0;
+    float: left;
+    width: 64%;
+}
+.list {
+    float: right;
+    width: 30%;
+}
+.thu-2 {
+    width: 60%;
+}
+.thu-2 img {
+    float: left;
+    width: 50%;
+}
+.thu-2 .detail {
+    margin-left: 5%;
+    /*如果不加6em，因为文字较少，第二张图片就会第一段文字的下边*/
+    margin-bottom: 6em;
+    float: left;
+    width: 45%;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clear: both;
+    padding-top: 1%;
+    padding-bottom: 4%;
+    width: 100%;
+    background-color: #666;
+}
+.title {
+    /*1em=16px*/
+    font-size: 1.375em;
+    font-weight: 700;
+}
+.text {
+    font-size: 0.875em;
+}
+.little-title {
+    font-size: 1.125em;
+    font-weight: 700;
+}
+.time {
+    margin-bottom: 0.625em;
+    font-size: 0.625em;
+    color: #aca9a9;
+}
+
+
