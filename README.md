@@ -110,7 +110,7 @@ task 08
 5. 尝试学习并应用栅格化
 代码：day39文件夹
 
-task 09
+task 09   
 学习使用ES6及Webpack
 http://exploringjs.com/es6/
 http://webpack.github.io/
