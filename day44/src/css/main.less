@@ -1,4 +1,92 @@
-#hello {
-  background-color: red;
-  color: #ffffff;
+//.function {
+//  .px2em(@px) {
+//    return: @px / 16px * 1em;
+//  }
+//}
+@top-border: 1/16em solid #bfbfbf;
+.px2em(@property, @px) {
+  @property: @px / 16px * 1em;
+}
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+.flex {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+}
+.justify-content(@justify-content) {
+  -webkit-box-pack: @justify-content;
+  -moz-justify-content: @justify-content;
+  -webkit-justify-content: @justify-content;
+  justify-content: @justify-content;
+}
+.align-items(@align-items) {
+  -webkit-box-align: @align-items;
+  -moz-align-items: @align-items;
+  -webkit-align-items: @align-items;
+  align-items: @align-items;
+}
+.circle(@diameter, @bgc, @radius){
+  width: @diameter;
+  height: @diameter;
+  background: @bgc;
+  .border-radius(@radius);
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px){
+    #top {
+      position: relative;
+      border: @top-border;
+      width: 100%;
+      height: 10%;
+      background-color: #d8d8d8;
+      p {
+        text-align: center;
+        .px2em(font-size, 24px);
+        //font-size: 1.5em ;
+      }
+      button {
+        position: absolute;
+        right: 3%;
+        //top没有经过精确计算，只是取了个大概值
+        top: 20%;
+        height: 60%;
+        width: 15%;
+        border: @top-border;
+        font-size: 1.1em;
+      }
+    }
+
+    #priority {
+      .flex;
+      .justify-content(space-around);
+      .align-items(center);
+      width: 100%;
+      //由于设置了float，height再用百分比并不会有高度
+      height: 5em;
+      border: @top-border;
+      background-color: #feeaea;
+      .text {
+        margin-left: 0.5em;
+        font-size: 1.5em;
+      }
+      .flex {
+        .flex;
+        .align-items(center);
+      }
+      #red-circle {
+        .circle(3em, #ce0b24, 1.5em);
+      }
+      #yellow-circle {
+        .circle(3em, #f7e63b, 1.5em);
+      }
+      #green-circle {
+        .circle(3em, #437414, 1.5em);
+      }
+    }
 }
