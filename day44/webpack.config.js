@@ -32,6 +32,10 @@ module.exports = {
             //     test: /\.txt$/,
             //     loader: 'raw-loader'
             // }
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
+            }
         ]
     },
     // plugins: [

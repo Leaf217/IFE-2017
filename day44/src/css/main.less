@@ -9,8 +9,8 @@
 }
 .border-radius(@radius) {
   -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-  border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
 }
 .flex {
   display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
@@ -20,16 +20,16 @@
   display: flex;
 }
 .justify-content(@justify-content) {
-  -webkit-box-pack: @justify-content;
-  -moz-justify-content: @justify-content;
   -webkit-justify-content: @justify-content;
-  justify-content: @justify-content;
+     -moz-justify-content: @justify-content;
+         -webkit-box-pack: @justify-content;
+          justify-content: @justify-content;
 }
 .align-items(@align-items) {
-  -webkit-box-align: @align-items;
-  -moz-align-items: @align-items;
   -webkit-align-items: @align-items;
-  align-items: @align-items;
+    -webkit-box-align: @align-items;
+     -moz-align-items: @align-items;
+          align-items: @align-items;
 }
 .circle(@diameter, @bgc, @radius){
   width: @diameter;
@@ -43,14 +43,18 @@
       position: relative;
       border: @top-border;
       width: 100%;
-      height: 10%;
+      height: 5em;
       background-color: #d8d8d8;
       p {
+        //height: 5em;
+        //line-height: 5em;
+        //可能是button有position的缘故，用lineheight并不能上下居中，所以就写了个大概的margin值
+        margin-top: 1.2em;
         text-align: center;
-        .px2em(font-size, 24px);
-        //font-size: 1.5em ;
+        font-size: 1.5em ;
       }
-      button {
+      #add,
+      #done {
         position: absolute;
         right: 3%;
         //top没有经过精确计算，只是取了个大概值
@@ -58,7 +62,15 @@
         height: 60%;
         width: 15%;
         border: @top-border;
-        font-size: 1.1em;
+      }
+      #cancel {
+        position: absolute;
+        left: 3%;
+        //top没有经过精确计算，只是取了个大概值
+        top: 20%;
+        height: 60%;
+        width: 15%;
+        border: @top-border;
       }
     }
 
@@ -73,42 +85,96 @@
       background-color: #feeaea;
       .text {
         margin-left: 0.5em;
-        font-size: 1.5em;
+        font-size: 1.3em;
       }
       .flex {
         .flex;
         .align-items(center);
+        width: 30%;
+        border: @top-border;
+        border-color: #feeaea;
       }
       #red-circle {
-        .circle(3em, #ce0b24, 1.5em);
+        .circle(2em, #ce0b24, 1.5em);
       }
       #yellow-circle {
-        .circle(3em, #f7e63b, 1.5em);
+        .circle(2em, #f7e63b, 1.5em);
       }
       #green-circle {
-        .circle(3em, #437414, 1.5em);
+        .circle(2em, #437414, 1.5em);
       }
     }
+
+    #status {
+      .flex;
+      .justify-content(space-around);
+      .align-items(center);
+      width: 100%;
+      height: 5em;
+      border: @top-border;
+      background-color: #ecfeeb;
+      .text {
+        margin-left: 0.5em;
+        font-size: 1.3em;
+      }
+      .flex{
+        .flex;
+        .align-items(center);
+        width: 30%;
+        border: @top-border;
+        border-color: #ecfeeb;
+      }
+      img {
+        width: 3em;
+        height: 3em;
+      }
+    }
+
+    #bottom {
+      position: absolute;
+      bottom: 0;
+      .flex;
+      .justify-content(space-around);
+      .align-items(center);
+      width: 100%;
+      height: 5em;
+      border: @top-border;
+      background-color: #d8d8d8;
+      p {
+        font-size: 1.5em;
+      }
+      #all {
+        font-weight: 500;
+      }
+    }
+
+    #new-task {
+      margin-top: 1em;
+      width: 90%;
+      #new-input {
+        overflow: auto;//隐藏两个滚动条
+        resize: none; //去掉右下角的resize
+        border: @top-border;
+        width: 100%;
+        height: 6em;
+        font-size: 1.2em;
+      }
+    }
+
+    #content {
+      div{
+        border: @top-border;
+        width: 95%;
+        margin: 1% auto;
+        img {
+          float: left;
+        }
+        p {
+          margin-left: 10%;
+        }
+      }
+    }
+
 }
 
-#status {
-  .flex;
-  .justify-content(space-around);
-  .align-items(center);
-  width: 100%;
-  height: 5em;
-  border: @top-border;
-  background-color: #ecfeeb;
-  .text {
-    margin-left: 0.5em;
-    font-size: 1.5em;
-  }
-  .flex{
-    .flex;
-    .align-items(center);
-  }
-  img {
-    width: 3em;
-    height: 3em;
-  }
-}
+
