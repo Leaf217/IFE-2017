@@ -3,47 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a600d730-43e7-4ba6-9fee-44ba1fcadf92" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/enhanced-resolve/README.md" afterPath="$PROJECT_DIR$/day44/node_modules/enhanced-resolve/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js" afterPath="$PROJECT_DIR$/day44/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/enhanced-resolve/lib/Resolver.js" afterPath="$PROJECT_DIR$/day44/node_modules/enhanced-resolve/lib/Resolver.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/enhanced-resolve/lib/SymlinkPlugin.js" afterPath="$PROJECT_DIR$/day44/node_modules/enhanced-resolve/lib/SymlinkPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/enhanced-resolve/lib/forEachBail.js" afterPath="$PROJECT_DIR$/day44/node_modules/enhanced-resolve/lib/forEachBail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/enhanced-resolve/package.json" afterPath="$PROJECT_DIR$/day44/node_modules/enhanced-resolve/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/json-loader/package.json" afterPath="$PROJECT_DIR$/day44/node_modules/json-loader/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/bin/config-optimist.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/bin/config-optimist.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/bin/config-yargs.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/bin/config-yargs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/bin/convert-argv.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/bin/convert-argv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/DelegatedModule.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/DelegatedModule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/DelegatedModuleFactoryPlugin.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/DelegatedModuleFactoryPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/DelegatedPlugin.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/DelegatedPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/DllReferencePlugin.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/DllReferencePlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/ExternalModule.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/ExternalModule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/ExternalModuleFactoryPlugin.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/ExternalModuleFactoryPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/HotModuleReplacement.runtime.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/HotModuleReplacement.runtime.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/MultiCompiler.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/MultiCompiler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/NormalModule.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/NormalModule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/NormalModuleFactory.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/NormalModuleFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/Parser.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/Parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/RecordIdsPlugin.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/RecordIdsPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/SourceMapDevToolPlugin.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/SourceMapDevToolPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/Stats.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/Stats.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/Template.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/Template.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/dependencies/HarmonyCompatibilityDependency.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/dependencies/HarmonyCompatibilityDependency.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/optimize/AggressiveMergingPlugin.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/optimize/AggressiveMergingPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/optimize/AggressiveSplittingPlugin.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/optimize/AggressiveSplittingPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/optimize/ChunkModuleIdRangePlugin.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/optimize/ChunkModuleIdRangePlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/optimize/ConcatenatedModule.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/optimize/ConcatenatedModule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/optimize/ModuleConcatenationPlugin.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/optimize/ModuleConcatenationPlugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/util/identifier.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/util/identifier.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/lib/webpack.js" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/lib/webpack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/node_modules/webpack/package.json" afterPath="$PROJECT_DIR$/day44/node_modules/webpack/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/package-lock.json" afterPath="$PROJECT_DIR$/day44/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/package.json" afterPath="$PROJECT_DIR$/day44/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/src/css/main.css" afterPath="$PROJECT_DIR$/day44/src/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/src/css/main.less" afterPath="$PROJECT_DIR$/day44/src/css/main.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/src/index.js" afterPath="$PROJECT_DIR$/day44/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day44/webpack.config.js" afterPath="$PROJECT_DIR$/day44/webpack.config.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,42 +23,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day44/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
+            <state relative-caret-position="989">
               <caret line="136" column="55" lean-forward="false" selection-start-line="136" selection-start-column="55" selection-end-line="136" selection-end-column="55" />
-              <folding>
-                <element signature="e#47#70#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day44/src/css/main.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="103" column="17" lean-forward="false" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day44/src/data.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#46#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="day29.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day29/script/day29.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1920">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -113,9 +38,9 @@
         <option value="SCSS File" />
         <option value="CSS File" />
         <option value="Less File" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="tsconfig.json" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -151,10 +76,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/day25/day25.js" />
-        <option value="$PROJECT_DIR$/day29/script/111.js" />
-        <option value="$PROJECT_DIR$/day29/script/event.js" />
-        <option value="$PROJECT_DIR$/day29/day29.html" />
         <option value="$PROJECT_DIR$/day29/script/navigationData.js" />
         <option value="$PROJECT_DIR$/day29/day29.css" />
         <option value="$PROJECT_DIR$/day29/script/tableData.js" />
@@ -202,6 +123,10 @@
         <option value="$PROJECT_DIR$/day44/src/data.js" />
         <option value="$PROJECT_DIR$/day44/src/css/main.less" />
         <option value="$PROJECT_DIR$/day44/src/index.js" />
+        <option value="$PROJECT_DIR$/test/test.html" />
+        <option value="$PROJECT_DIR$/test/test.js" />
+        <option value="$PROJECT_DIR$/day54/index.html" />
+        <option value="$PROJECT_DIR$/day54/src/main.js" />
       </list>
     </option>
   </component>
@@ -283,56 +208,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFE-2017" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFE-2017" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="day44" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFE-2017" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFE-2017" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="day29" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFE-2017" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IFE-2017" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="day29" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -349,17 +224,17 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/day43/src" />
-      <recent name="$PROJECT_DIR$/day39" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/day44/images" />
       <recent name="$PROJECT_DIR$/day44" />
       <recent name="$PROJECT_DIR$/day44/src" />
       <recent name="$PROJECT_DIR$/day44/dist" />
-      <recent name="$PROJECT_DIR$/test/dist" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/day43/src" />
+      <recent name="$PROJECT_DIR$/day39" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -506,11 +381,13 @@
       <workItem from="1501071136882" duration="6275000" />
       <workItem from="1501233032606" duration="4554000" />
       <workItem from="1501293868495" duration="14102000" />
+      <workItem from="1501332725695" duration="77000" />
+      <workItem from="1501414677217" duration="4383000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="361214000" />
+    <option name="totallyTimeSpent" value="365674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="710" extended-state="6" />
@@ -520,18 +397,18 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,22 +424,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day43/package.json" />
-    <entry file="file://$PROJECT_DIR$/day43/style/bootstrap/img/glyphicons-halflings-white.png" />
-    <entry file="file://$PROJECT_DIR$/day43/style/bootstrap/img/glyphicons-halflings.png" />
-    <entry file="file://$PROJECT_DIR$/day39/html/bootstrap-version.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day43/style/main.css" />
-    <entry file="file://$PROJECT_DIR$/day39/效果图/移动端.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/index.html" />
     <entry file="file://$PROJECT_DIR$/test/dist/bundle.js" />
     <entry file="file://$PROJECT_DIR$/test/src/index.js" />
@@ -600,7 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="2423" column="3" lean-forward="false" selection-start-line="2423" selection-start-column="1" selection-end-line="2423" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -655,10 +515,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day29/script/day29.js">
+    <entry file="file://$PROJECT_DIR$/day44/src/css/main.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1920">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="103" column="17" lean-forward="false" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -673,21 +533,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day44/src/css/main.less">
+    <entry file="file://$PROJECT_DIR$/day29/script/day29.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="103" column="17" lean-forward="false" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day54/config/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/vue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day54/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day54/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day44/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
+        <state relative-caret-position="989">
           <caret line="136" column="55" lean-forward="false" selection-start-line="136" selection-start-column="55" selection-end-line="136" selection-end-column="55" />
-          <folding>
-            <element signature="e#47#70#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
