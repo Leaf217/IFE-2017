@@ -47,11 +47,13 @@ $(document).ready((function () {
                        + '<p id="all">All</p> '
                        + '</div>';
 
+
         return elem;
     }
     $(document.body).append(basic());
     // document.body.appendChild(basic());
     // $("#top button").remove();
+
 
     //require图标
     var high_on = require('../images/play_fill_red.png');
@@ -110,18 +112,20 @@ $(document).ready((function () {
 
     //给add绑定点击事件
     $("#add").bind("click",function () {
+        $("#content").detach();
         var $add_button = $("#top button").detach();
         $("#top p").after("<button type='button' id='done'>Done</button>");
         $("#top p").prepend("<button type='button' id='cancel'>Cancel</button>");
         $("#priority, #status").css("background-color", "#fff");
         $(".flex").css("border-color", "#bfbfbf");
-        $("#status").after("<div id='ttt'><form action='' id='new-task'><textarea name='newtask' id='new-input'>This is a new task</textarea></form></div>");
+        $("#status").after("<div id='ttt'><form action='' id='new-task'><textarea name='newtask' id='new-input' placeholder='This is a new task'></textarea></form></div>");
         //之前把cancel写出来不行，必须要这里边才生效
         //给cancel绑定点击事件
         $("#cancel").bind("click",function () {
             $("div").remove();
             $(document.body).append(basic());
             $("#add").replaceWith($add_button);
+            $(document.body).append(import_data());
         })
     })
 
@@ -132,10 +136,28 @@ $(document).ready((function () {
         var $priority = $("#priority").detach();
         var $status = $("#status").detach();
         var $content = $("#content").detach();
-        var one = '';
 
-        $("#top").after("<p>Now! The OneThing is</p>");
+
+        $("#top").after("<p id='reminder'>Now! The OneThing is</p>");
+        $.each(data, function (i, obj) {
+            var one = '';
+            if (obj["priority"] == "high" && obj["status"] == "ongoing") {
+                one += '<div id="one-content"><img src="' + high_on + '"alt="high_on"><p>' + obj["con"] + '</p></div>';
+            }
+            $("#reminder").after(one);
+        });
+        $("#all").bind("click",function () {
+            $("#onething").css("font-weight", "normal");
+            $("#all").css("font-weight", "500");
+            $("#reminder").remove();
+            $("#one-content").remove();
+
+
+        })
+
+
     })
+
 
 
 
