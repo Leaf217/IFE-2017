@@ -129,7 +129,8 @@ IFE-2017实验班
 > http://webpack.github.io/  
 > http://babeljs.io/  
 * 任务要求
-> 如示意图（day43效果图中），实现一个简单的todo管理的移动Web工具  
+> 如示意图（day43效果图中），实现一个简单的todo管理的移动Web工具 
+
 > 0. 使用ES6，Webpack，LESS完成需求;<br>
 > 1. 可以使用JQuery、Zepto、Hammer等基础库组件，但不允许使用react, vue等框架;<br>  
 > 2. 样式方面上图仅为示意图，不需要严格按照图去实现样式，可以使用bootstrap等样式库;<br>  
