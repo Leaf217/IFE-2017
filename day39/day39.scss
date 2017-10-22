@@ -15,7 +15,7 @@ html {
   }
 }
 
-//显示方式
+//显示方式，flex布局
 @mixin display($display, $justify-content, $align-items: stretch, $flex-direction: row) {
   display: $display;
   justify-content: $justify-content;

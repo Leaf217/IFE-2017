@@ -1,6 +1,6 @@
 .logo {
     float: left;
-    width: 100%;
+    width: 98%;
     padding: 1% 1%;
     color: #fff;
     background-color: #000;
@@ -23,16 +23,32 @@
     width: 100%;
     height: auto;
 }
-.thu-1 div {
+.thu-1 .image {
+    position: relative;
     margin-right: 2%;
     float: left;
     width: 20%;
 }
-.thu-1 div img {
+.thu-1 .shadow {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 4em;
+    background-color: #46434b;
+    opacity: 0.7;
+}
+.thu-1 img {
+    display: block;
     width: 100%;
     height: auto;
 }
+.thu-1 .detail {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
 .right-thu {
+    position: relative;
     float: right;
     width: 30%;
 }
@@ -40,14 +56,24 @@
     width: 100%;
     height: auto;
 }
+.right-thu div {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
 .horizon {
     margin: 1em 0;
     float: left;
     width: 64%;
 }
-.list {
+.list-fa{
+    position: relative;
     float: right;
     width: 30%;
+}
+.list {
+    position: absolute;
+    top: -480px;
 }
 .thu-2 {
     width: 60%;
@@ -58,7 +84,7 @@
 }
 .thu-2 .detail {
     margin-left: 5%;
-    /*如果不加6em，因为文字较少，第二张图片就会第一段文字的下边*/
+    /*如果不加6em，因为文字较少，第二张图片就会到第一段文字的下边*/
     margin-bottom: 6em;
     float: left;
     width: 45%;
@@ -72,6 +98,9 @@
     padding-bottom: 4%;
     width: 100%;
     background-color: #666;
+}
+.three-menu {
+    display: none;
 }
 .title {
     /*1em=16px*/
@@ -89,6 +118,87 @@
     margin-bottom: 0.625em;
     font-size: 0.625em;
     color: #aca9a9;
+}
+@media screen and (min-width: 320px) and (max-width: 475px)  {
+    body {
+        /*basic font-size*/
+        font-size: 8px;
+    }
+    .dis-none, .menu, .horizon {
+        display: none;
+    }
+    .logo {
+        padding: 1% 1%;
+        color: #fff;
+        background-color: #000;
+    }
+    .logo p {
+        text-align: center;
+    }
+    .thu-1 {
+        position: relative;
+        float: left;
+        margin-left: 2%;
+        margin-bottom: 1em;
+    }
+    .thu-1 .image {
+        /*31.3333*3=94   .thu-1 margin-left=(100-94)/2*/
+        width: 31.3333%;
+    }
+    .thu-1 img {
+        /*div包裹img时，底下会有一条白边，用这个方法去除白边*/
+        display: block;
+    }
+    .thu-1 .shadow {
+        height: 3.5em;
+    }
+    .right-thu {
+        position: relative;
+        /*如果设置为float：none，那么接下来图片上的文字定位就不是相对于此图片了，
+        而是相对于上面三张图片的顶部了，不知道为什么，但是设置为left就是相对于此图片了*/
+        float: left;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .right-thu img {
+        width: 100%;
+        height: auto;
+    }
+    .right-thu .detail {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+    }
+    .thu-2 {
+        float: left;
+        width: 100%;
+    }
+    .thu-2 img {
+        margin-right: 2%;
+        float: right;
+        width: 48%;
+    }
+    .thu-2 .detail {
+        margin-left: 2%;
+        margin-right: 3%;
+        margin-bottom: 2em;
+    }
+    .list-fa {
+        position: static;
+        float: none;
+        width: 100%;
+    }
+    .list {
+        position: static;
+    }
+    .three-menu {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        width: 100%;
+        background-color: #eee;
+    }
 }
 
 
