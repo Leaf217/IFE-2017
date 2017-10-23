@@ -4,7 +4,7 @@ IFE-2017实验班
 ## task 01  
 * 任务要求：   
 > 尝试分别用flex和不使用flex两种方法，实现如效果图中所示的各种布局。 
-![](https://github.com/Leaf217/IFE_2017/raw/master/day05/效果图.png)
+![](https://github.com/Leaf217/IFE-2017/raw/master/day05/效果图.png)
 * 代码：  
 > day05的css和html文件  
 
